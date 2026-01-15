@@ -1,0 +1,329 @@
+/* ========================================
+   HIGH BEAM DIGITAL - Wallpaper Magazine Style
+   Editorial Design: Clean, Classic, Refined
+
+   Brand Colors (used flat, no gradients):
+   - Deep Blue: #000998
+   - Amber: #FFAC00
+   - Pink/Red: #FF0043
+   - Charcoal: #2A2A2A
+   - Light Grey: #F5F5F5
+   - Warm Grey: #E8E8E8
+======================================== */
+
+/* Base Styles */
+* {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.02em;
+}
+
+/* Navigation - Editorial */
+.nav-link-editorial {
+    position: relative;
+    color: #2A2A2A;
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-link-editorial::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: #000998;
+    transition: width 0.3s ease;
+}
+
+.nav-link-editorial:hover {
+    color: #000998;
+}
+
+.nav-link-editorial:hover::after {
+    width: 100%;
+}
+
+/* Dropdown Menu - Editorial */
+.nav-dropdown {
+    position: relative;
+}
+
+.nav-dropdown-trigger {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 1rem);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 220px;
+    background: white;
+    border: 1px solid #E8E8E8;
+    padding: 1rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 100;
+}
+
+.nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #E8E8E8;
+}
+
+.nav-dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid white;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-dropdown-item {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: #2A2A2A;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.nav-dropdown-item:hover {
+    background: #F5F5F5;
+    color: #000998;
+}
+
+/* Mobile Dropdown */
+.mobile-dropdown-trigger {
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: inherit;
+}
+
+.mobile-dropdown.active .mobile-dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    display: block;
+}
+
+/* CTA Buttons - Editorial Style */
+.cta-button-editorial {
+    display: inline-block;
+    background: #000998;
+    color: white;
+    padding: 1rem 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.cta-button-editorial:hover {
+    background: #2A2A2A;
+}
+
+.cta-button-outline {
+    display: inline-block;
+    background: transparent;
+    color: #2A2A2A;
+    padding: 1rem 2.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-size: 0.75rem;
+    border: 1px solid #2A2A2A;
+    transition: all 0.3s ease;
+}
+
+.cta-button-outline:hover {
+    background: #2A2A2A;
+    color: white;
+}
+
+/* Logo Carousel - Editorial Style */
+.logo-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.logo-carousel {
+    overflow: hidden;
+}
+
+.logo-track {
+    display: flex;
+    gap: 5rem;
+    animation: scroll 50s linear infinite;
+    width: max-content;
+}
+
+.logo-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.carousel-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 160px;
+    height: 50px;
+}
+
+.carousel-logo img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.carousel-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.carousel-logo.logo-large img {
+    height: 45px;
+}
+
+/* Service Cards - Editorial */
+.service-card-editorial {
+    transition: all 0.3s ease;
+}
+
+.service-card-editorial:hover {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Case Study Cards - Editorial */
+.case-study-editorial {
+    transition: all 0.3s ease;
+}
+
+/* Selection Color */
+::selection {
+    background: #000998;
+    color: white;
+}
+
+/* Scrollbar - Minimal */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #E8E8E8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2A2A2A;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .carousel-logo {
+        width: 120px;
+        height: 40px;
+    }
+
+    .carousel-logo img {
+        height: 24px;
+    }
+
+    .carousel-logo.logo-large img {
+        height: 32px;
+    }
+
+    .logo-track {
+        gap: 3rem;
+    }
+}
+
+/* Scroll Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Active Navigation State */
+.nav-link-editorial.active {
+    color: #000998;
+}
+
+.nav-link-editorial.active::after {
+    width: 100%;
+}
+
+/* Print Styles */
+@media print {
+    nav, footer {
+        display: none;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+    }
+
+    section {
+        page-break-inside: avoid;
+    }
+}
