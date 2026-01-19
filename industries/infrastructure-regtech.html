@@ -3,16 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Infrastructure & RegTech Copywriter - Specialist copywriting for KYC, AML, core banking, and financial plumbing. Technical white papers and B2B sales materials.">
-    <meta name="keywords" content="regtech copywriter, infrastructure copywriter, KYC, AML, core banking, technical writing">
+    <meta name="description" content="Banking Infrastructure & RegTech Copywriter - Specialist copywriting for WealthTech, RegTech and institutional finance. Technical white papers for Tier 1 banks and pension funds.">
+    <meta name="keywords" content="regtech copywriter, wealthtech copywriter, banking infrastructure, institutional finance, core banking, fintech copywriter">
     <meta name="author" content="Henry Bell">
 
-    <title>Infrastructure & RegTech Copywriter | High Beam Digital</title>
+    <title>Banking Infrastructure & RegTech Copywriter | High Beam Digital</title>
+
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Banking Infrastructure & RegTech Copywriting",
+        "provider": {
+            "@type": "ProfessionalService",
+            "name": "High Beam Digital",
+            "url": "https://highbeamdigital.co.uk"
+        },
+        "description": "Specialist copywriting for WealthTech, RegTech and institutional finance. Messaging that signals reliability for Tier 1 banks and pension funds.",
+        "areaServed": "Global",
+        "serviceType": ["B2B Copywriting", "Technical White Papers", "Sales Enablement"],
+        "keywords": ["regtech copywriter", "wealthtech content", "banking infrastructure", "institutional finance marketing", "core banking"]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -24,50 +42,110 @@
                         'deep-blue': '#000998',
                         'amber': '#FFAC00',
                         'pink-red': '#FF0043',
-                        'dark-navy': '#001870',
-                        'light-grey': '#F5F5F5',
-                        'warm-grey': '#E8E8E8',
-                        'charcoal': '#2A2A2A',
+                        'slate': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'teal': {
+                            700: '#0f766e',
+                            800: '#115e59',
+                        },
+                        'alabaster': '#fafaf8',
                     },
                     fontFamily: {
-                        'sans': ['DM Sans', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
                     },
                 }
             }
         }
     </script>
 
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="../style.css">
+    <style>
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 0.75rem);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 220px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; visibility: visible; }
+        .nav-dropdown-item {
+            display: block;
+            padding: 0.625rem 1.25rem;
+            color: #334155;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+        }
+        .nav-dropdown-item:hover { background: #f8fafc; color: #0f766e; }
+        .mobile-dropdown.active .mobile-dropdown-arrow { transform: rotate(180deg); }
+        .mobile-dropdown.active .mobile-dropdown-menu { display: block; }
+
+        /* Logo sizing - consistent height */
+        .client-logo {
+            height: 36px;
+            width: auto;
+            max-width: 140px;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+        .client-logo:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+        /* Larger logos for text-heavy logos */
+        .client-logo-lg {
+            height: 44px;
+            max-width: 180px;
+        }
+    </style>
 </head>
-<body class="font-sans text-charcoal bg-white">
+<body class="font-sans text-slate-900 bg-alabaster antialiased">
+
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white z-50 border-b border-warm-grey">
-        <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="../index.html" class="flex items-center gap-3">
-                <span class="font-serif text-2xl tracking-tight">High Beam Digital</span>
+    <nav class="fixed top-0 left-0 right-0 bg-alabaster/95 backdrop-blur-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="../index-full.html" class="flex-shrink-0">
+                <img src="../Images/Logo/HBD-full-colour.png" alt="High Beam Digital" class="h-9 w-auto">
             </a>
-            <div class="hidden md:flex gap-10 items-center">
-                <a href="../index.html#methodology" class="nav-link-editorial">Process</a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="../index-full.html#services" class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Services</a>
                 <div class="nav-dropdown">
-                    <button class="nav-link-editorial nav-dropdown-trigger">
+                    <button class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors flex items-center gap-1">
                         Industries
-                        <svg class="w-3 h-3 ml-1 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
                     <div class="nav-dropdown-menu">
                         <a href="payments-fx.html" class="nav-dropdown-item">Payments & FX</a>
-                        <a href="embedded-finance.html" class="nav-dropdown-item">Embedded Finance</a>
-                        <a href="banking-wealthtech.html" class="nav-dropdown-item">Banking & WealthTech</a>
-                        <a href="infrastructure-regtech.html" class="nav-dropdown-item font-medium text-deep-blue">Infrastructure & RegTech</a>
+                        <a href="embedded-finance.html" class="nav-dropdown-item">Embedded Finance & Lending</a>
+                        <a href="infrastructure-regtech.html" class="nav-dropdown-item font-medium text-teal-700">Banking Infrastructure & RegTech</a>
                         <a href="accounting-taxtech.html" class="nav-dropdown-item">Accounting & TaxTech</a>
                     </div>
                 </div>
-                <a href="../index.html#work" class="nav-link-editorial">Work</a>
-                <a href="../index.html#services" class="nav-link-editorial">Services</a>
-                <a href="../index.html#contact" class="nav-link-editorial">Contact</a>
+                <a href="../index-full.html#work" class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Work</a>
+                <a href="../contact.html" class="text-sm font-medium text-white bg-teal-700 px-5 py-2.5 hover:bg-teal-800 transition-colors">
+                    Get in Touch
+                </a>
             </div>
             <button id="mobile-menu-btn" class="md:hidden p-2">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -76,92 +154,89 @@
             </button>
         </div>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-warm-grey">
-            <div class="px-6 py-6 flex flex-col gap-5">
-                <a href="../index.html#methodology" class="nav-link-editorial">Process</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="../index-full.html#services" class="text-slate-700 py-2">Services</a>
                 <div class="mobile-dropdown">
-                    <button class="nav-link-editorial mobile-dropdown-trigger w-full text-left flex justify-between items-center">
+                    <button class="mobile-dropdown-trigger w-full text-left flex justify-between items-center text-slate-700 py-2">
                         Industries
                         <svg class="w-4 h-4 mobile-dropdown-arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                         </svg>
                     </button>
-                    <div class="mobile-dropdown-menu hidden pl-4 mt-3 space-y-3 border-l border-warm-grey">
-                        <a href="payments-fx.html" class="block text-charcoal/70 hover:text-deep-blue">Payments & FX</a>
-                        <a href="embedded-finance.html" class="block text-charcoal/70 hover:text-deep-blue">Embedded Finance</a>
-                        <a href="banking-wealthtech.html" class="block text-charcoal/70 hover:text-deep-blue">Banking & WealthTech</a>
-                        <a href="infrastructure-regtech.html" class="block text-deep-blue font-medium">Infrastructure & RegTech</a>
-                        <a href="accounting-taxtech.html" class="block text-charcoal/70 hover:text-deep-blue">Accounting & TaxTech</a>
+                    <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2 border-l border-slate-200">
+                        <a href="payments-fx.html" class="block text-slate-500 hover:text-teal-700 py-1">Payments & FX</a>
+                        <a href="embedded-finance.html" class="block text-slate-500 hover:text-teal-700 py-1">Embedded Finance & Lending</a>
+                        <a href="infrastructure-regtech.html" class="block text-teal-700 font-medium py-1">Banking Infrastructure & RegTech</a>
+                        <a href="accounting-taxtech.html" class="block text-slate-500 hover:text-teal-700 py-1">Accounting & TaxTech</a>
                     </div>
                 </div>
-                <a href="../index.html#work" class="nav-link-editorial">Work</a>
-                <a href="../index.html#services" class="nav-link-editorial">Services</a>
-                <a href="../index.html#contact" class="nav-link-editorial">Contact</a>
+                <a href="../index-full.html#work" class="text-slate-700 py-2">Work</a>
+                <a href="../contact.html" class="text-white bg-teal-700 px-5 py-3 text-center mt-2">Get in Touch</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="pt-32 pb-20 bg-charcoal text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <p class="text-white/40 uppercase tracking-[0.25em] text-xs font-medium mb-6">Industry Expertise</p>
-            <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.1] mb-8">
-                Infrastructure & RegTech
+    <section class="pt-32 pb-20 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-amber mb-6">Copywriting for Banking Infrastructure & RegTech</p>
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-[1.1] mb-8">
+                Building trust when the stakes are high
             </h1>
-            <p class="text-3xl md:text-4xl font-serif text-white/80 mb-8">
-                Making the Invisible, Indispensable.
-            </p>
-            <p class="text-xl text-white/60 max-w-2xl leading-relaxed">
-                You sell the "plumbing" of finance. It's unsexy but critical. The challenge is explaining why your KYC solution or ledger system reduces risk—without boring the reader to death.
+            <p class="text-lg text-white/60 max-w-2xl leading-relaxed">
+                When you are selling to Tier 1 banks or pension funds, innovation has to go hand in hand with implementation and accountability. The sales cycles are long and your content often acts as a proxy for your reliability.
             </p>
         </div>
     </section>
 
-    <!-- Why Copy Matters -->
+    <!-- Main Content -->
     <section class="py-24">
-        <div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="grid lg:grid-cols-2 gap-16 items-start">
                 <div>
-                    <p class="text-charcoal uppercase tracking-[0.25em] text-xs font-medium mb-4">The Challenge</p>
-                    <h2 class="font-serif text-4xl mb-8">Why Copy Matters in Infrastructure</h2>
-                    <div class="space-y-6 text-charcoal/70 leading-relaxed">
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-deep-blue mb-4">The Challenge</p>
+                    <h2 class="font-serif text-3xl md:text-4xl leading-tight text-slate-900 mb-8">
+                        Why Copy Matters in Banking Infrastructure
+                    </h2>
+                    <div class="space-y-6 text-slate-600 leading-relaxed">
                         <p>
-                            Infrastructure companies face a unique challenge: your product is complex, your buyers are technical, and your sales cycles are long. You need copy that works across multiple stakeholders—from the compliance officer to the CTO to the CFO.
+                            Marketing here has to take you all the way from first contact, through the <span class="text-deep-blue font-medium">Risk Committee</span> and into practice. If your white paper or sales deck feels lightweight, you are viewed as an <span class="text-pink-red font-medium">operational risk</span>.
                         </p>
                         <p>
-                            The "black box" problem is real: prospects struggle to understand what's actually happening inside your solution. Generic claims about "AI-powered" or "best-in-class" don't cut it when millions in risk exposure are on the line.
+                            I build messaging that signals reliability and permanence. I am comfortable working with legal and compliance teams to ensure assets are safe for the regulator without stripping them of persuasive power.
                         </p>
                         <p>
-                            I specialise in translating technical complexity into business value—creating materials that earn trust with technical buyers while making the commercial case for decision-makers.
+                            Ensure your copy brings clients in for the long haul, and turn legacy migration into a logical evolution rather than a risky leap of faith.
                         </p>
                     </div>
                 </div>
-                <div class="bg-light-grey p-10">
-                    <p class="text-xs uppercase tracking-[0.2em] text-charcoal/40 mb-6">Key Topics I Cover</p>
+                <div class="bg-slate-50 p-10 border border-slate-200">
+                    <p class="text-xs uppercase tracking-[0.15em] text-slate-400 mb-6">Key Topics I Cover</p>
                     <ul class="space-y-4">
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-charcoal rounded-full mt-2"></span>
-                            <span>KYC/KYB & identity verification</span>
+                            <span class="w-1.5 h-1.5 bg-slate-700 rounded-full mt-2 flex-shrink-0"></span>
+                            <span class="text-slate-700">Core banking & ledger modernisation</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-charcoal rounded-full mt-2"></span>
-                            <span>AML & transaction monitoring</span>
+                            <span class="w-1.5 h-1.5 bg-slate-700 rounded-full mt-2 flex-shrink-0"></span>
+                            <span class="text-slate-700">KYC/AML & regulatory compliance</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-charcoal rounded-full mt-2"></span>
-                            <span>Core banking & ledger systems</span>
+                            <span class="w-1.5 h-1.5 bg-slate-700 rounded-full mt-2 flex-shrink-0"></span>
+                            <span class="text-slate-700">Fund administration & asset servicing</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-charcoal rounded-full mt-2"></span>
-                            <span>API orchestration & integration</span>
+                            <span class="w-1.5 h-1.5 bg-slate-700 rounded-full mt-2 flex-shrink-0"></span>
+                            <span class="text-slate-700">Risk management & reporting</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-charcoal rounded-full mt-2"></span>
-                            <span>Regulatory reporting automation</span>
+                            <span class="w-1.5 h-1.5 bg-slate-700 rounded-full mt-2 flex-shrink-0"></span>
+                            <span class="text-slate-700">Legacy migration & integration</span>
                         </li>
                         <li class="flex items-start gap-3">
-                            <span class="w-1.5 h-1.5 bg-charcoal rounded-full mt-2"></span>
-                            <span>Fraud detection & risk scoring</span>
+                            <span class="w-1.5 h-1.5 bg-slate-700 rounded-full mt-2 flex-shrink-0"></span>
+                            <span class="text-slate-700">Institutional investor communications</span>
                         </li>
                     </ul>
                 </div>
@@ -169,67 +244,43 @@
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="py-24 bg-deep-blue text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <p class="text-amber uppercase tracking-[0.25em] text-xs font-medium mb-4">Services</p>
-            <h2 class="font-serif text-4xl mb-16">How I Help Infrastructure & RegTech Companies</h2>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="border border-white/20 p-8">
-                    <h3 class="font-serif text-xl mb-4">Technical White Papers</h3>
-                    <p class="text-white/60 leading-relaxed">
-                        Open the "black box" for technical buyers. White papers that explain your architecture, methodology, and differentiation without dumbing it down.
-                    </p>
-                </div>
-                <div class="border border-white/20 p-8">
-                    <h3 class="font-serif text-xl mb-4">Sales Battle Cards</h3>
-                    <p class="text-white/60 leading-relaxed">
-                        Arm your sales team for complex B2B cycles. Competitive positioning, objection handling, and ROI frameworks that close enterprise deals.
-                    </p>
-                </div>
-                <div class="border border-white/20 p-8">
-                    <h3 class="font-serif text-xl mb-4">Integration Guides & Technical Blogs</h3>
-                    <p class="text-white/60 leading-relaxed">
-                        Developer-focused content that reduces friction, builds community, and positions you as the go-to solution for your category.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Client Logos -->
-    <section class="py-20 border-y border-warm-grey">
-        <div class="max-w-6xl mx-auto px-6">
-            <p class="text-center text-xs uppercase tracking-[0.25em] text-charcoal/40 mb-12">Infrastructure Clients</p>
+    <section class="py-16 border-y border-slate-200 bg-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <p class="text-center text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400 mb-10">Banking Infrastructure & RegTech Clients</p>
             <div class="flex flex-wrap justify-center items-center gap-12 md:gap-16">
-                <div class="h-10">
-                    <img src="../Images/Client logos/Finshape.png" alt="Finshape" class="h-full w-auto object-contain filter grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all">
-                </div>
+                <img src="../Images/Client logos/Finshape-Photoroom.png" alt="Finshape" class="client-logo">
+                <img src="../Images/Client logos/Calastone.webp" alt="Calastone" class="client-logo client-logo-lg">
+                <img src="../Images/Client logos/payconiq logo.png" alt="Payconiq" class="client-logo">
+                <img src="../Images/Client logos/MSCI_logo_2019.svg" alt="MSCI" class="client-logo">
+                <img src="../Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="client-logo client-logo-lg">
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
     <section class="py-24">
-        <div class="max-w-3xl mx-auto px-6 text-center">
-            <h2 class="font-serif text-4xl mb-6">Ready to make your infrastructure indispensable?</h2>
-            <p class="text-charcoal/60 text-lg mb-10">
-                Let's discuss how I can help your infrastructure or regtech company close more enterprise deals.
+        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-6">Ready to build trust with institutional buyers?</h2>
+            <p class="text-slate-600 text-lg mb-10">
+                Let's discuss how I can help your infrastructure or RegTech company close more enterprise deals.
             </p>
-            <a href="../index.html#contact" class="cta-button-editorial">
+            <a href="../contact.html" class="inline-flex items-center gap-2 bg-teal-700 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors">
                 Start a Conversation
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
             </a>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-charcoal text-white/40 py-12">
-        <div class="max-w-6xl mx-auto px-6">
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <a href="../index.html" class="font-serif text-xl text-white">High Beam Digital</a>
+                <a href="../index-full.html" class="font-serif text-xl text-white">High Beam Digital</a>
                 <p class="text-sm">&copy; 2025 High Beam Digital. All rights reserved.</p>
-                <a href="https://linkedin.com" class="text-white/40 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/henry-c-bell/" class="text-slate-400 hover:text-white transition-colors">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                     </svg>

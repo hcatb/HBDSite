@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Beam Digital | Style Variations</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;500;600&family=Bebas+Neue&family=Montserrat:wght@300;400;600;800&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'deep-blue': '#000998',
+                        'amber': '#FFAC00',
+                        'pink-red': '#FF0043',
+                        'charcoal': '#2A2A2A',
+                        'warm-grey': '#E8E8E8',
+                        'light-grey': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        'sans': ['DM Sans', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                        'bebas': ['Bebas Neue', 'sans-serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'cormorant': ['Cormorant Garamond', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Shared curved image styles */
+        .hero-image-container {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .hero-image-container::before {
+            content: '';
+            position: absolute;
+            left: -100px;
+            top: 0;
+            width: 200px;
+            height: 100%;
+            background: white;
+            border-radius: 0 50% 50% 0 / 0 50% 50% 0;
+            z-index: 2;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        /* Style 2: Bold Agency - dark bg curve */
+        .style-2 .hero-image-container::before {
+            background: #0a0a0a;
+        }
+
+        /* Style 3: Magazine Layout */
+        .style-3 .hero-image-container {
+            width: 66.666%;
+            left: 0;
+            right: auto;
+        }
+        .style-3 .hero-image-container::before {
+            display: none;
+        }
+        .style-3 .hero-image {
+            filter: brightness(0.9);
+        }
+
+        /* Style 4: Lifestyle - full bleed image */
+        .style-4 .hero-image-container {
+            width: 100%;
+        }
+        .style-4 .hero-image-container::before {
+            display: none;
+        }
+        .style-4 .hero-image {
+            filter: brightness(0.6);
+        }
+
+        /* Logo carousel */
+        .logo-carousel {
+            overflow: hidden;
+        }
+        .logo-track {
+            display: flex;
+            gap: 4rem;
+            animation: scroll 30s linear infinite;
+            width: max-content;
+        }
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .carousel-logo img {
+            height: 28px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(100%);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+        }
+        .carousel-logo:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* White logos for dark sections */
+        .logos-white .carousel-logo img {
+            filter: grayscale(100%) brightness(10);
+            opacity: 0.4;
+        }
+        .logos-white .carousel-logo:hover img {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+        }
+
+        /* Style label */
+        .style-label {
+            position: absolute;
+            top: 1rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0,0,0,0.8);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            z-index: 100;
+            border-radius: 2px;
+        }
+        .style-4 .style-label {
+            background: rgba(255,255,255,0.9);
+            color: #2A2A2A;
+        }
+    </style>
+</head>
+<body class="font-sans text-charcoal">
+
+    <!-- Fixed Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-warm-grey">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="Images/Logo/HBD-full-colour.png" alt="High Beam Digital" class="h-10 w-auto">
+            </a>
+            <div class="flex gap-4 text-xs">
+                <a href="#style1" class="px-3 py-2 bg-light-grey hover:bg-deep-blue hover:text-white transition-colors">1. Current</a>
+                <a href="#style2" class="px-3 py-2 bg-light-grey hover:bg-deep-blue hover:text-white transition-colors">2. Bold</a>
+                <a href="#style3" class="px-3 py-2 bg-light-grey hover:bg-deep-blue hover:text-white transition-colors">3. Magazine</a>
+                <a href="#style4" class="px-3 py-2 bg-light-grey hover:bg-deep-blue hover:text-white transition-colors">4. Lifestyle</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         STYLE 1: Current Editorial Style
+    ============================================= -->
+    <section id="style1" class="min-h-screen relative overflow-hidden pt-20 bg-white style-1">
+        <div class="style-label">Style 1: Current Editorial</div>
+
+        <div class="hero-image-container">
+            <img src="Images/Henry Bell-09.jpg" alt="Henry Bell" class="hero-image">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-16 md:pt-24 relative z-10">
+            <div class="md:w-1/2 lg:w-[55%]">
+                <p class="text-deep-blue uppercase tracking-[0.2em] text-xs font-medium mb-6">
+                    B2B Fintech Copywriter
+                </p>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
+                    <span class="text-charcoal">High Beam</span>
+                    <span class="text-deep-blue"> Digital</span>
+                </h1>
+                <p class="text-lg md:text-xl text-charcoal/70 leading-relaxed mb-8 max-w-xl">
+                    Specialist copywriting, content strategy and SEO to help your business shine. Expert in <span class="text-deep-blue font-medium">embedded finance</span>, <span class="text-pink-red font-medium">banking</span>, <span class="text-amber font-medium">payments</span> and B2B fintech.
+                </p>
+                <a href="mailto:hcatbell@gmail.com" class="inline-block bg-deep-blue text-white px-10 py-4 text-sm font-medium uppercase tracking-widest hover:bg-pink-red transition-colors">
+                    Start a Conversation
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 mt-16 relative z-10">
+            <div class="md:w-1/2 lg:w-[55%]">
+                <p class="text-xs uppercase tracking-[0.2em] text-charcoal/40 mb-6">Trusted By</p>
+                <div class="logo-carousel">
+                    <div class="logo-track">
+                        <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STYLE 2: Bold Agency (Bebas Neue, dark, punchy)
+    ============================================= -->
+    <section id="style2" class="min-h-screen relative overflow-hidden pt-20 bg-[#0a0a0a] style-2">
+        <div class="style-label">Style 2: Bold Agency</div>
+
+        <div class="hero-image-container">
+            <img src="Images/Henry Bell-09.jpg" alt="Henry Bell" class="hero-image">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-16 md:pt-32 relative z-10">
+            <div class="md:w-1/2 lg:w-[55%]">
+                <p class="text-pink-red uppercase tracking-[0.3em] text-xs font-bold mb-4">
+                    Fintech Copy That Converts
+                </p>
+                <h1 class="font-bebas text-6xl md:text-7xl lg:text-8xl leading-[0.9] mb-6 text-white">
+                    WORDS THAT<br>
+                    <span class="text-amber">MOVE</span> MONEY
+                </h1>
+                <p class="font-montserrat text-lg text-white/60 leading-relaxed mb-10 max-w-lg font-light">
+                    Strategic copy for embedded finance, payments & banking. From seed stage to Series C and beyond.
+                </p>
+                <a href="mailto:hcatbell@gmail.com" class="inline-block bg-amber text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors">
+                    Let's Talk
+                </a>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 mt-20 relative z-10">
+            <div class="md:w-1/2 lg:w-[55%] logos-white">
+                <p class="text-xs uppercase tracking-[0.3em] text-white/30 mb-6 font-montserrat">Clients Include</p>
+                <div class="logo-carousel">
+                    <div class="logo-track">
+                        <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                        <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STYLE 3: Magazine Layout (Image dominant, sidebar text)
+    ============================================= -->
+    <section id="style3" class="min-h-screen relative overflow-hidden pt-20 bg-white style-3">
+        <div class="style-label">Style 3: Magazine Layout</div>
+
+        <div class="hero-image-container">
+            <img src="Images/Henry Bell-09.jpg" alt="Henry Bell" class="hero-image">
+        </div>
+
+        <div class="absolute right-0 top-20 bottom-0 w-1/3 bg-light-grey z-10 flex flex-col justify-center px-12">
+            <p class="text-deep-blue uppercase tracking-[0.2em] text-[10px] font-medium mb-8 border-b border-charcoal/10 pb-4">
+                B2B Fintech Copywriter
+            </p>
+
+            <h1 class="font-serif text-3xl md:text-4xl leading-tight mb-6">
+                High Beam<br>Digital
+            </h1>
+
+            <div class="w-12 h-0.5 bg-deep-blue mb-6"></div>
+
+            <p class="text-sm text-charcoal/60 leading-relaxed mb-8">
+                Specialist copywriting, content strategy and SEO for embedded finance, banking, payments and B2B fintech.
+            </p>
+
+            <a href="mailto:hcatbell@gmail.com" class="inline-block border-2 border-charcoal text-charcoal px-6 py-3 text-xs font-medium uppercase tracking-widest hover:bg-charcoal hover:text-white transition-colors text-center">
+                Get in Touch
+            </a>
+
+            <div class="mt-12 pt-8 border-t border-charcoal/10">
+                <p class="text-[10px] uppercase tracking-[0.2em] text-charcoal/40 mb-4">Trusted By</p>
+                <div class="grid grid-cols-4 gap-4">
+                    <img src="Images/Client logos/yl-logo.svg" alt="YouLend" class="h-5 w-auto object-contain filter grayscale opacity-40">
+                    <img src="Images/Client logos/nium-logo.png" alt="Nium" class="h-5 w-auto object-contain filter grayscale opacity-40">
+                    <img src="Images/Client logos/Calastone.webp" alt="Calastone" class="h-5 w-auto object-contain filter grayscale opacity-40">
+                    <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 w-auto object-contain filter grayscale opacity-40">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         STYLE 4: Lifestyle (Full bleed, warm, aspirational)
+    ============================================= -->
+    <section id="style4" class="min-h-screen relative overflow-hidden pt-20 style-4">
+        <div class="style-label">Style 4: Lifestyle</div>
+
+        <div class="hero-image-container">
+            <img src="Images/Henry Bell-09.jpg" alt="Henry Bell" class="hero-image">
+        </div>
+
+        <div class="absolute inset-0 flex items-center justify-center z-10 pt-20">
+            <div class="text-center max-w-3xl px-6">
+                <p class="font-cormorant italic text-white/70 text-xl mb-4">
+                    B2B Fintech Copywriter
+                </p>
+
+                <h1 class="font-cormorant text-5xl md:text-6xl lg:text-7xl text-white mb-6 font-medium">
+                    High Beam Digital
+                </h1>
+
+                <div class="w-24 h-px bg-white/40 mx-auto mb-8"></div>
+
+                <p class="font-cormorant text-xl md:text-2xl text-white/80 leading-relaxed mb-10 max-w-xl mx-auto italic">
+                    Strategic copywriting for the brands reshaping finance. Embedded payments. Digital banking. The future of money.
+                </p>
+
+                <a href="mailto:hcatbell@gmail.com" class="inline-block bg-white/10 backdrop-blur-sm border border-white/30 text-white px-10 py-4 text-sm font-medium uppercase tracking-widest hover:bg-white hover:text-charcoal transition-colors">
+                    Start a Conversation
+                </a>
+
+                <div class="mt-16 logos-white">
+                    <p class="text-xs uppercase tracking-[0.3em] text-white/40 mb-6">Trusted By Industry Leaders</p>
+                    <div class="logo-carousel max-w-lg mx-auto">
+                        <div class="logo-track">
+                            <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                            <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-charcoal/40 text-sm border-t border-warm-grey bg-white">
+        <p>&copy; 2025 High Beam Digital. Style comparison page.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

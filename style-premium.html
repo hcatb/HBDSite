@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>High Beam Digital | Strategic Messaging for Fintech</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'slate': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'teal': {
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                        },
+                        'gold': {
+                            400: '#c9a962',
+                            500: '#b8956f',
+                        },
+                        'coral': {
+                            500: '#c4785a',
+                        },
+                        'alabaster': '#fafaf8',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Subtle infrastructure pattern - abstract nodes/lines */
+        .infrastructure-pattern {
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 40% 80%, rgba(15, 23, 42, 0.02) 1px, transparent 1px),
+                radial-gradient(circle at 60% 20%, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px, 80px 80px, 100px 100px, 120px 120px;
+        }
+
+        /* Geometric line pattern overlay */
+        .infrastructure-pattern::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.04;
+            background-image:
+                linear-gradient(90deg, transparent 49.5%, #0f172a 49.5%, #0f172a 50.5%, transparent 50.5%),
+                linear-gradient(0deg, transparent 49.5%, #0f172a 49.5%, #0f172a 50.5%, transparent 50.5%);
+            background-size: 120px 120px;
+            mask-image: radial-gradient(ellipse 80% 60% at 30% 50%, black, transparent);
+        }
+
+        /* Portrait image styling */
+        .portrait-container {
+            position: relative;
+        }
+
+        .portrait-container::before {
+            content: '';
+            position: absolute;
+            top: 2rem;
+            left: 2rem;
+            right: -1rem;
+            bottom: -1rem;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            z-index: 0;
+        }
+
+        .portrait-image {
+            position: relative;
+            z-index: 1;
+            filter: grayscale(15%) contrast(1.02);
+        }
+
+        /* Elegant underline for secondary link */
+        .elegant-link {
+            position: relative;
+            display: inline-block;
+        }
+
+        .elegant-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+
+        .elegant-link:hover::after {
+            opacity: 0.8;
+        }
+
+        /* Subtle divider */
+        .divider-line {
+            width: 48px;
+            height: 1px;
+            background: linear-gradient(90deg, #0f766e, transparent);
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-900 bg-alabaster antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-alabaster/90 backdrop-blur-sm z-50 border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-8 lg:px-12 py-5 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-3">
+                <img src="Images/Logo/HBD-full-colour.png" alt="High Beam Digital" class="h-9 w-auto">
+            </a>
+            <a
+                href="mailto:hcatbell@gmail.com"
+                class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors"
+            >
+                Contact
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen pt-24 pb-16 lg:pb-0">
+        <div class="max-w-7xl mx-auto px-8 lg:px-12">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-[calc(100vh-6rem)]">
+
+                <!-- Left Column: Content -->
+                <div class="relative infrastructure-pattern py-8 lg:py-16">
+                    <!-- Eyebrow -->
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-8">
+                        Strategic Messaging for Fintech Infrastructure
+                    </p>
+
+                    <!-- Headline -->
+                    <h1 class="font-serif text-4xl md:text-[2.75rem] lg:text-5xl leading-[1.15] text-slate-900 mb-8">
+                        Turn Complex Financial Infrastructure into <em class="not-italic text-slate-700">Human Narratives.</em>
+                    </h1>
+
+                    <!-- Divider -->
+                    <div class="divider-line mb-8"></div>
+
+                    <!-- Subhead -->
+                    <p class="text-lg leading-relaxed text-slate-600 mb-10 max-w-xl">
+                        The "growth at any cost" era is over. The market now demands clarity and compliance. I help Series B+ scale-ups in embedded finance and payments architect messaging that drives adoption and satisfies regulators.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-wrap items-center gap-6 mb-16">
+                        <!-- Primary CTA -->
+                        <a
+                            href="mailto:hcatbell@gmail.com"
+                            class="inline-flex items-center gap-2 bg-teal-700 text-white px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors"
+                        >
+                            Book a Strategy Diagnostic
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+
+                        <!-- Secondary Link -->
+                        <a
+                            href="#model"
+                            class="elegant-link text-sm font-medium text-coral-500 hover:text-slate-900 transition-colors"
+                        >
+                            View the Consultancy Model
+                        </a>
+                    </div>
+
+                    <!-- Social Proof -->
+                    <div class="border-t border-slate-200 pt-8">
+                        <p class="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400 mb-5">
+                            Trusted By
+                        </p>
+                        <div class="flex flex-wrap items-center gap-8">
+                            <img src="Images/Client logos/Finshape.png" alt="Finshape" class="h-6 w-auto object-contain filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                            <img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI" class="h-6 w-auto object-contain filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                            <img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB" class="h-5 w-auto object-contain filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                            <img src="Images/Client logos/nium-logo.png" alt="Nium" class="h-5 w-auto object-contain filter grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Portrait -->
+                <div class="hidden lg:flex justify-end items-center">
+                    <div class="portrait-container w-full max-w-md">
+                        <img
+                            src="Images/Henry Bell-09.jpg"
+                            alt="Henry Bell - B2B Fintech Copywriter"
+                            class="portrait-image w-full aspect-[4/5] object-cover object-top"
+                        >
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Mobile Portrait (shown below content on smaller screens) -->
+    <section class="lg:hidden pb-16 px-8">
+        <div class="max-w-sm mx-auto portrait-container">
+            <img
+                src="Images/Henry Bell-09.jpg"
+                alt="Henry Bell - B2B Fintech Copywriter"
+                class="portrait-image w-full aspect-[4/5] object-cover object-top"
+            >
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-slate-400 text-xs border-t border-slate-100 bg-white">
+        <p>&copy; 2025 High Beam Digital. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

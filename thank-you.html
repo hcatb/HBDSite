@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Thank You | High Beam Digital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'slate': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            600: '#475569',
+                            700: '#334155',
+                            900: '#0f172a',
+                        },
+                        'teal': {
+                            700: '#0f766e',
+                            800: '#115e59',
+                        },
+                        'alabaster': '#fafaf8',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-900 bg-alabaster antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 bg-alabaster/95 backdrop-blur-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="index-full.html" class="flex items-center gap-3">
+                <img src="Images/Logo/HBD-full-colour.png" alt="High Beam Digital" class="h-9 w-auto">
+            </a>
+        </div>
+    </nav>
+
+    <!-- Thank You Content -->
+    <section class="min-h-screen flex items-center justify-center pt-20 pb-24">
+        <div class="max-w-xl mx-auto px-6 text-center">
+            <div class="w-16 h-16 bg-teal-700 rounded-full flex items-center justify-center mx-auto mb-8">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h1 class="font-serif text-4xl md:text-5xl text-slate-900 mb-6">
+                Thank you
+            </h1>
+            <p class="text-lg text-slate-600 mb-10">
+                Your message has been received. I'll get back to you within 24 hours.
+            </p>
+            <a href="index-full.html" class="inline-flex items-center gap-2 bg-teal-700 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors">
+                <svg class="w-4 h-4 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+                Back to Homepage
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <a href="index-full.html" class="font-serif text-xl text-white">High Beam Digital</a>
+                <p class="text-sm">&copy; 2025 High Beam Digital. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
