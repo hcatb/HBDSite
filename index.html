@@ -3,13 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="High Beam Digital - Strategic messaging for fintech. Specialist copy & strategy for embedded finance and payments leaders.">
-    <title>High Beam Digital | Strategic Messaging for Fintech</title>
+    <meta name="description" content="High Beam Digital - Strategic messaging for B2B fintech. Specialist copy & strategy for embedded finance, payments and banking leaders.">
+    <meta name="keywords" content="B2B copywriter, FinTech copywriter, SaaS copywriter, fintech messaging, payments copywriter, embedded finance">
+    <meta name="author" content="Henry Bell">
+
+    <title>High Beam Digital | Strategic Messaging for B2B Fintech</title>
+
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "High Beam Digital",
+        "url": "https://highbeamdigital.co.uk",
+        "description": "Strategic messaging and copywriting for B2B fintech. Specialist copy and strategy for embedded finance, payments, banking and accounting tech leaders.",
+        "founder": {
+            "@type": "Person",
+            "name": "Henry Bell"
+        },
+        "areaServed": "Global",
+        "serviceType": ["B2B Copywriting", "Content Strategy", "Messaging Architecture", "Sales Enablement"],
+        "knowsAbout": ["Payments", "FX", "Embedded Finance", "Banking Infrastructure", "RegTech", "Accounting", "TaxTech"],
+        "sameAs": [
+            "https://www.linkedin.com/in/henry-c-bell/"
+        ]
+    }
+    </script>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,16 +42,31 @@
             theme: {
                 extend: {
                     colors: {
+                        'slate': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'teal': {
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                        },
                         'deep-blue': '#000998',
                         'amber': '#FFAC00',
                         'pink-red': '#FF0043',
-                        'charcoal': '#2A2A2A',
-                        'warm-grey': '#E8E8E8',
-                        'light-grey': '#F5F5F5',
+                        'alabaster': '#fafaf8',
                     },
                     fontFamily: {
-                        'sans': ['DM Sans', 'sans-serif'],
-                        'serif': ['Playfair Display', 'serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
                     },
                 }
             }
@@ -35,33 +74,73 @@
     </script>
 
     <style>
-        /* Curved image mask */
-        .hero-image-container {
-            position: absolute;
-            right: 0;
-            top: 0;
-            width: 40%;
-            height: 100%;
-            overflow: hidden;
+        /* Subtle infrastructure pattern */
+        .infrastructure-pattern {
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 40% 80%, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px, 80px 80px, 100px 100px;
         }
 
-        .hero-image-container::before {
+        .infrastructure-pattern::before {
             content: '';
             position: absolute;
-            left: -100px;
-            top: 0;
-            width: 200px;
-            height: 100%;
-            background: white;
-            border-radius: 0 50% 50% 0 / 0 50% 50% 0;
-            z-index: 2;
+            inset: 0;
+            opacity: 0.03;
+            background-image:
+                linear-gradient(90deg, transparent 49.5%, #0f172a 49.5%, #0f172a 50.5%, transparent 50.5%),
+                linear-gradient(0deg, transparent 49.5%, #0f172a 49.5%, #0f172a 50.5%, transparent 50.5%);
+            background-size: 120px 120px;
+            mask-image: radial-gradient(ellipse 80% 60% at 30% 50%, black, transparent);
+            pointer-events: none;
         }
 
-        .hero-image {
+        /* Portrait styling */
+        .portrait-container {
+            position: relative;
+        }
+        .portrait-container::before {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            right: -0.75rem;
+            bottom: -0.75rem;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            z-index: 0;
+        }
+        .portrait-image {
+            position: relative;
+            z-index: 1;
+            filter: grayscale(10%) contrast(1.02);
+        }
+
+        /* Elegant underline */
+        .elegant-link {
+            position: relative;
+            display: inline-block;
+        }
+        .elegant-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center top;
+            height: 1px;
+            background: currentColor;
+            opacity: 0.3;
+            transition: opacity 0.3s ease;
+        }
+        .elegant-link:hover::after {
+            opacity: 0.8;
+        }
+
+        /* Divider line */
+        .divider-line {
+            width: 48px;
+            height: 1px;
+            background: linear-gradient(90deg, #0f766e, transparent);
         }
 
         /* Logo carousel */
@@ -70,8 +149,8 @@
         }
         .logo-track {
             display: flex;
-            gap: 4rem;
-            animation: scroll 30s linear infinite;
+            gap: 3rem;
+            animation: scroll 40s linear infinite;
             width: max-content;
         }
         @keyframes scroll {
@@ -79,8 +158,9 @@
             100% { transform: translateX(-50%); }
         }
         .carousel-logo img {
-            height: 28px;
+            height: 32px;
             width: auto;
+            max-width: 120px;
             object-fit: contain;
             filter: grayscale(100%);
             opacity: 0.5;
@@ -90,125 +170,729 @@
             filter: grayscale(0%);
             opacity: 1;
         }
+        /* Dark logo bar - white logos with colour on hover */
+        .logo-track-dark .carousel-logo img {
+            filter: grayscale(100%) brightness(0) invert(1);
+            opacity: 0.6;
+        }
+        .logo-track-dark .carousel-logo:hover img {
+            filter: grayscale(0%) brightness(1) invert(0);
+            opacity: 1;
+        }
+        /* Larger logos for text-heavy logos */
+        .carousel-logo-lg img {
+            height: 40px;
+            max-width: 160px;
+        }
 
-        /* Mobile adjustments */
-        @media (max-width: 768px) {
-            .hero-image-container {
-                position: relative;
-                width: 100%;
-                height: 300px;
-                margin-bottom: 2rem;
-            }
-            .hero-image-container::before {
-                display: none;
-            }
-            .hero-image {
-                border-radius: 0 0 50% 50% / 0 0 30% 30%;
-            }
+        /* Quotes carousel */
+        .quotes-track {
+            display: flex;
+            animation: scrollQuotes 30s linear infinite;
+        }
+        @keyframes scrollQuotes {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .quotes-track:hover {
+            animation-play-state: paused;
+        }
+
+        /* Nav dropdown */
+        .nav-dropdown {
+            position: relative;
+        }
+        .nav-dropdown-menu {
+            position: absolute;
+            top: calc(100% + 0.75rem);
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 220px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .nav-dropdown:hover .nav-dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+        }
+        .nav-dropdown-item {
+            display: block;
+            padding: 0.625rem 1.25rem;
+            color: #334155;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+        }
+        .nav-dropdown-item:hover {
+            background: #f8fafc;
+            color: #0f766e;
+        }
+
+        /* Mobile dropdown */
+        .mobile-dropdown.active .mobile-dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        .mobile-dropdown.active .mobile-dropdown-menu {
+            display: block;
+        }
+
+        /* Service card hover */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Industry card */
+        .industry-card {
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .industry-card:hover {
+            border-color: #0f766e;
+            background: #f8fafc;
+        }
+        .industry-card:hover .industry-arrow {
+            transform: translateX(4px);
+        }
+        .industry-arrow {
+            transition: transform 0.3s ease;
         }
     </style>
 </head>
-<body class="font-sans text-charcoal bg-white">
+<body class="font-sans text-slate-900 bg-alabaster antialiased">
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm z-50 border-b border-warm-grey">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="fixed top-0 left-0 right-0 bg-alabaster/95 backdrop-blur-sm z-50 border-b border-slate-100">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
-                <img src="Images/Logo/HBD-full-colour.png" alt="High Beam Digital" class="h-10 w-auto">
+                <img src="Images/Logo/HBD-full-colour.png" alt="High Beam Digital" class="h-9 w-auto">
             </a>
-            <a
-                href="mailto:hcatbell@gmail.com"
-                class="bg-deep-blue text-white px-6 py-2.5 text-xs font-medium uppercase tracking-widest hover:bg-pink-red transition-colors"
-            >
-                Get in Touch
-            </a>
+            <div class="hidden md:flex gap-8 items-center">
+                <a href="#services" class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Services</a>
+                <div class="nav-dropdown">
+                    <button class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors flex items-center gap-1">
+                        Industries
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="nav-dropdown-menu">
+                        <a href="industries/payments-fx.html" class="nav-dropdown-item">Payments & FX</a>
+                        <a href="industries/embedded-finance.html" class="nav-dropdown-item">Embedded Finance & Lending</a>
+                        <a href="industries/infrastructure-regtech.html" class="nav-dropdown-item">Banking Infrastructure & RegTech</a>
+                        <a href="industries/accounting-taxtech.html" class="nav-dropdown-item">Accounting & TaxTech</a>
+                    </div>
+                </div>
+                <a href="#work" class="text-sm font-medium text-slate-600 hover:text-teal-700 transition-colors">Work</a>
+                <a href="contact.html" class="text-sm font-medium text-white bg-teal-700 px-5 py-2.5 hover:bg-teal-800 transition-colors">
+                    Get in Touch
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#services" class="text-slate-700 py-2">Services</a>
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-trigger w-full text-left flex justify-between items-center text-slate-700 py-2">
+                        Industries
+                        <svg class="w-4 h-4 mobile-dropdown-arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div class="mobile-dropdown-menu hidden pl-4 mt-2 space-y-2 border-l border-slate-200">
+                        <a href="industries/payments-fx.html" class="block text-slate-500 hover:text-teal-700 py-1">Payments & FX</a>
+                        <a href="industries/embedded-finance.html" class="block text-slate-500 hover:text-teal-700 py-1">Embedded Finance & Lending</a>
+                        <a href="industries/infrastructure-regtech.html" class="block text-slate-500 hover:text-teal-700 py-1">Banking Infrastructure & RegTech</a>
+                        <a href="industries/accounting-taxtech.html" class="block text-slate-500 hover:text-teal-700 py-1">Accounting & TaxTech</a>
+                    </div>
+                </div>
+                <a href="#work" class="text-slate-700 py-2">Work</a>
+                <a href="contact.html" class="text-white bg-teal-700 px-5 py-3 text-center mt-2">Get in Touch</a>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="min-h-screen relative overflow-hidden pt-20">
-        <!-- Curved Image on Right -->
-        <div class="hero-image-container hidden md:block">
-            <img
-                src="Images/Henry Bell-09.jpg"
-                alt="Henry Bell"
-                class="hero-image"
-            >
-        </div>
-
-        <!-- Content -->
-        <div class="max-w-7xl mx-auto px-6 pt-16 md:pt-24 relative z-10">
-            <!-- Mobile Image -->
-            <div class="md:hidden mb-8">
-                <img
-                    src="Images/Henry Bell-09.jpg"
-                    alt="Henry Bell"
-                    class="w-full h-64 object-cover object-top rounded-b-[40%]"
-                >
-            </div>
-
-            <div class="md:w-1/2 lg:w-[55%]">
-                <!-- Tagline -->
-                <p class="text-deep-blue uppercase tracking-[0.2em] text-xs font-medium mb-6">
-                    B2B Fintech Copywriter
+    <section class="min-h-screen pt-24 pb-16 relative">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="pt-12 lg:pt-20 pb-16 relative infrastructure-pattern">
+                <!-- Eyebrow -->
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-8">
+                    Strategic Messaging for B2B Fintech
                 </p>
 
                 <!-- Headline -->
-                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl leading-tight mb-6">
-                    <span class="text-charcoal">High Beam</span>
-                    <span class="text-deep-blue"> Digital</span>
+                <h1 class="font-serif text-4xl md:text-5xl lg:text-[3.5rem] leading-[1.1] text-slate-900 mb-8 max-w-3xl">
+                    Turn complex financial concepts into copy that converts
                 </h1>
 
-                <!-- Description -->
-                <p class="text-lg md:text-xl text-charcoal/70 leading-relaxed mb-8 max-w-xl">
-                    Specialist copywriting, content strategy and SEO to help your business shine. Expert in <span class="text-deep-blue font-medium">embedded finance</span>, <span class="text-pink-red font-medium">banking</span>, <span class="text-amber font-medium">payments</span> and B2B fintech, with experience powering clients from start-up to scale-up and beyond.
+                <!-- Divider -->
+                <div class="divider-line mb-8"></div>
+
+                <!-- Subhead -->
+                <p class="text-lg leading-relaxed text-slate-600 mb-10 max-w-2xl">
+                    I bring over a decade of experience helping leaders in payments, banking, embedded finance and accounting tech translate technical complexity into clear commercial value. Working from pre-launch startups to market leaders, I create messaging that drives adoption and secures market position.
                 </p>
 
                 <!-- CTA -->
-                <a
-                    href="mailto:hcatbell@gmail.com"
-                    class="inline-block bg-deep-blue text-white px-10 py-4 text-sm font-medium uppercase tracking-widest hover:bg-pink-red transition-colors mb-8"
-                >
-                    Start a Conversation
-                </a>
-
+                <div class="flex flex-wrap items-center gap-5">
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-700 text-white px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors">
+                        Book a Strategy Call
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="#services" class="elegant-link text-sm font-medium text-coral-500 hover:text-slate-900 transition-colors">
+                        View Services
+                    </a>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Logo Section - Above the fold -->
-        <div class="max-w-7xl mx-auto px-6 mt-12 md:mt-16 relative z-10">
-            <div class="md:w-1/2 lg:w-[55%]">
-                <p class="text-xs uppercase tracking-[0.2em] text-charcoal/40 mb-6">Trusted By</p>
-                <div class="logo-carousel">
-                    <div class="logo-track">
-                        <!-- First set -->
-                        <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
-                        <!-- Duplicate set for seamless loop -->
-                        <div class="carousel-logo"><img src="Images/Client logos/yl-logo.svg" alt="YouLend"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/Finshape.png" alt="Finshape"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
-                        <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+    <!-- Logo Bar -->
+    <section class="py-10 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <p class="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-500 mb-6 text-center">Trusted By</p>
+            <div class="logo-carousel">
+                <div class="logo-track logo-track-dark">
+                    <div class="carousel-logo"><img src="Images/Client logos/YouLend.svg" alt="YouLend"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                    <div class="carousel-logo carousel-logo-lg"><img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer"></div>
+                    <div class="carousel-logo carousel-logo-lg"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/Finshape-Photoroom.png" alt="Finshape"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/payconiq logo.png" alt="Payconiq"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/Deaglo.png" alt="Deaglo"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/logo_capitalise_r_full_green_rgb.png" alt="Capitalise"></div>
+                    <!-- Duplicate -->
+                    <div class="carousel-logo"><img src="Images/Client logos/YouLend.svg" alt="YouLend"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/nium-logo.png" alt="Nium"></div>
+                    <div class="carousel-logo carousel-logo-lg"><img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer"></div>
+                    <div class="carousel-logo carousel-logo-lg"><img src="Images/Client logos/Calastone.webp" alt="Calastone"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/dext-logo-rgb-orange.webp" alt="Dext"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/MSCI_logo_2019.svg" alt="MSCI"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/Finshape-Photoroom.png" alt="Finshape"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/payconiq logo.png" alt="Payconiq"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/Deaglo.png" alt="Deaglo"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/AccountingWEB_Logo.png" alt="AccountingWEB"></div>
+                    <div class="carousel-logo"><img src="Images/Client logos/logo_capitalise_r_full_green_rgb.png" alt="Capitalise"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Illuminate Your Value Section (with photo) -->
+    <section class="py-24 lg:py-32 relative infrastructure-pattern">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div>
+                    <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-6">Why High Beam Digital</p>
+                    <h2 class="font-serif text-3xl md:text-4xl leading-tight text-slate-900 mb-8">
+                        Illuminate your value
+                    </h2>
+                    <div class="space-y-6 text-slate-600 leading-relaxed">
+                        <p>
+                            Money is everywhere, but so many financial brands fail to make their product actually meaningful. Fintech should be magic, not mundane.
+                        </p>
+                        <p>
+                            That's why I help businesses across the fintech spectrum build, maintain and grow relationships with their prospects, customers and peers based on tangible value.
+                        </p>
+                        <p>
+                            With High Beam Digital, you get the industry fluency of an insider with the personal insight to create real connections. From payment rails to PSD3, tokenisation to treasury, you can trust that your message will get through.
+                        </p>
+                        <p class="font-medium text-slate-800">
+                            Stop explaining your industry to your writer. Hand over the complexity, sit back, and watch your copy work for you.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Portrait -->
+                <div class="hidden lg:block">
+                    <div class="portrait-container max-w-sm ml-auto">
+                        <img
+                            src="Images/CTA/Henry Bell-09-compressed.jpg"
+                            alt="Henry Bell - Founder, High Beam Digital"
+                            class="portrait-image w-full aspect-[4/5] object-cover object-top"
+                        >
+                        <div class="mt-6">
+                            <p class="font-serif text-lg text-slate-900">Henry Bell</p>
+                            <p class="text-sm text-slate-500">Founder, High Beam Digital</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Services Section -->
+    <section id="services" class="py-24 lg:py-32 bg-slate-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="mb-16">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-400 mb-4">How I Can Help</p>
+                <h2 class="font-serif text-3xl md:text-4xl">Services</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Foundation & Pivot -->
+                <div class="service-card bg-slate-800/50 p-8 border border-slate-700">
+                    <h3 class="font-serif text-xl mb-6 text-white">Foundation & Pivot</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Messaging architecture & core pillars
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Value proposition design
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Brand voice & tone guidelines
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Website copy overhauls
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Competitor audits & gap analysis
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Customer personas
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Growth & Scale -->
+                <div class="service-card bg-slate-800/50 p-8 border border-slate-700">
+                    <h3 class="font-serif text-xl mb-6 text-white">Growth & Scale</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Thought leadership & opinion
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Original research & whitepapers
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            CEO ghostwriting & personal brand
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            SEO & GEO
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Email nurture sequences
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Case studies & campaign strategy
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Sales Enablement -->
+                <div class="service-card bg-slate-800/50 p-8 border border-slate-700">
+                    <h3 class="font-serif text-xl mb-6 text-white">Sales Enablement</h3>
+                    <ul class="space-y-3 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Sales decks & pitch assets
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Competitive battlecards
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Product & feature messaging
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Go-to-market messaging
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            Testimonial design
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="w-1 h-1 bg-teal-400 rounded-full mt-2 flex-shrink-0"></span>
+                            On-page CRO
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-24 lg:py-32 relative infrastructure-pattern">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="mb-16">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-4">Expertise</p>
+                <h2 class="font-serif text-3xl md:text-4xl text-slate-900">Industries</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- Payments & FX -->
+                <a href="industries/payments-fx.html" class="industry-card bg-white p-8 group">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-deep-blue/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-deep-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-serif text-xl text-slate-900">Payments & FX</h3>
+                                <svg class="w-5 h-5 text-teal-700 industry-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm">Finding the story in the numbers. Cross-border, treasury, reconciliation.</p>
+                </a>
+
+                <!-- Embedded Finance -->
+                <a href="industries/embedded-finance.html" class="industry-card bg-white p-8 group">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-amber/20 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-amber" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-serif text-xl text-slate-900">Embedded Finance & Lending</h3>
+                                <svg class="w-5 h-5 text-teal-700 industry-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm">Copy that stands out when finance is everywhere.</p>
+                </a>
+
+                <!-- Banking Infrastructure -->
+                <a href="industries/infrastructure-regtech.html" class="industry-card bg-white p-8 group">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-slate-100 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-slate-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-serif text-xl text-slate-900">Banking Infrastructure & RegTech</h3>
+                                <svg class="w-5 h-5 text-teal-700 industry-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm">Building trust when the stakes are high.</p>
+                </a>
+
+                <!-- Accounting & TaxTech -->
+                <a href="industries/accounting-taxtech.html" class="industry-card bg-white p-8 group">
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="w-12 h-12 bg-teal-700/10 flex items-center justify-center flex-shrink-0">
+                            <svg class="w-6 h-6 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-serif text-xl text-slate-900">Accounting & TaxTech</h3>
+                                <svg class="w-5 h-5 text-teal-700 industry-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm">Copy that works for the modern CFO.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="work" class="py-24 lg:py-32 bg-slate-50">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="mb-16">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-4">Work</p>
+                <div class="flex justify-between items-end">
+                    <h2 class="font-serif text-3xl md:text-4xl text-slate-900">Results you can measure</h2>
+                    <a href="case-studies.html" class="hidden md:inline-flex items-center gap-2 text-sm text-slate-600 hover:text-teal-700 transition-colors">
+                        View all
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- YouLend -->
+                <div class="bg-white group">
+                    <div class="aspect-[16/10] bg-slate-100 overflow-hidden">
+                        <img src="Case Studies/YouLend/Widening Access To Capital - YouLend 2023 Impact Report (3).png" alt="YouLend Impact Report" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-teal-700 uppercase tracking-[0.15em] text-xs font-medium mb-3">YouLend</p>
+                        <h3 class="font-serif text-xl mb-3 text-slate-900">Widening Access To Capital</h3>
+                        <p class="text-slate-600 text-sm mb-6">Created first Impact Report, leading to media coverage in Fintech Times and an FStech Award for Financial Inclusion.</p>
+                        <div class="flex gap-3">
+                            <span class="text-xs uppercase tracking-wider bg-slate-100 text-slate-600 px-3 py-1.5">Media Coverage</span>
+                            <span class="text-xs uppercase tracking-wider bg-teal-50 text-teal-700 px-3 py-1.5">Award Winner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iwoca -->
+                <div class="bg-white group">
+                    <div class="aspect-[16/10] bg-slate-100 overflow-hidden">
+                        <img src="Case Studies/Iwoca/Untitled presentation (2).png" alt="iwoca SEO Results" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <p class="text-pink-red uppercase tracking-[0.15em] text-xs font-medium mb-3">iwoca</p>
+                        <h3 class="font-serif text-xl mb-3 text-slate-900">Delivering 40% More SEO Traffic</h3>
+                        <p class="text-slate-600 text-sm mb-6">Defined new content strategy and produced high-quality content, generating over £300,000 in new loan volumes.</p>
+                        <div class="flex gap-3">
+                            <span class="text-xs uppercase tracking-wider bg-slate-100 text-slate-600 px-3 py-1.5">40% Traffic Increase</span>
+                            <span class="text-xs uppercase tracking-wider bg-slate-100 text-slate-600 px-3 py-1.5">£300k+ New Loans</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Carousel -->
+    <section class="py-24 lg:py-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 mb-12">
+            <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-4">Testimonials</p>
+            <h2 class="font-serif text-3xl md:text-4xl text-slate-900">What clients say</h2>
+        </div>
+
+        <div class="overflow-hidden">
+            <div class="quotes-track">
+                <!-- Quote 1 -->
+                <div class="flex-shrink-0 w-[500px] mx-4 bg-white border border-slate-200 p-8">
+                    <svg class="w-8 h-8 text-teal-700/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote class="text-slate-700 leading-relaxed mb-6">
+                        "Henry has produced <span class="text-deep-blue font-medium">outstanding, high quality work under pressure</span>, both as an individual and part of a team. I would recommend him for any project, no matter how large or small."
+                    </blockquote>
+                    <div>
+                        <p class="font-medium text-slate-900">Rachel Lee</p>
+                        <p class="text-sm text-slate-500">Growth Marketing Manager, Thought&Function</p>
+                    </div>
+                </div>
+
+                <!-- Quote 2 -->
+                <div class="flex-shrink-0 w-[500px] mx-4 bg-white border border-slate-200 p-8">
+                    <svg class="w-8 h-8 text-teal-700/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote class="text-slate-700 leading-relaxed mb-6">
+                        "We couldn't ask for a more <span class="text-amber font-medium">flexible partner</span>. A consummately safe pair of hands, his adaptability across our client base is matched only by the <span class="text-deep-blue font-medium">range of great content he creates</span>. Three years in, Henry remains our go-to."
+                    </blockquote>
+                    <div>
+                        <p class="font-medium text-slate-900">Harriet Green</p>
+                        <p class="text-sm text-slate-500">Founder & Director, HSG Advisory</p>
+                    </div>
+                </div>
+
+                <!-- Quote 3 -->
+                <div class="flex-shrink-0 w-[500px] mx-4 bg-white border border-slate-200 p-8">
+                    <svg class="w-8 h-8 text-teal-700/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote class="text-slate-700 leading-relaxed mb-6">
+                        "Henry and I collaborated on a project to grow the SEO channel. We achieved a <span class="text-pink-red font-medium">40% increase within 6 months</span>. This test was successful enough to be extended indefinitely, thanks in large part to Henry's <span class="text-deep-blue font-medium">strong contributions across strategy, process, and content creation</span>."
+                    </blockquote>
+                    <div>
+                        <p class="font-medium text-slate-900">Quentin Rouillon</p>
+                        <p class="text-sm text-slate-500">Senior Marketing Manager, iwoca</p>
+                    </div>
+                </div>
+
+                <!-- Duplicate for seamless loop -->
+                <div class="flex-shrink-0 w-[500px] mx-4 bg-white border border-slate-200 p-8">
+                    <svg class="w-8 h-8 text-teal-700/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote class="text-slate-700 leading-relaxed mb-6">
+                        "Henry has produced <span class="text-deep-blue font-medium">outstanding, high quality work under pressure</span>, both as an individual and part of a team. I would recommend him for any project, no matter how large or small."
+                    </blockquote>
+                    <div>
+                        <p class="font-medium text-slate-900">Rachel Lee</p>
+                        <p class="text-sm text-slate-500">Growth Marketing Manager, Thought&Function</p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-[500px] mx-4 bg-white border border-slate-200 p-8">
+                    <svg class="w-8 h-8 text-teal-700/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote class="text-slate-700 leading-relaxed mb-6">
+                        "We couldn't ask for a more <span class="text-amber font-medium">flexible partner</span>. A consummately safe pair of hands, his adaptability across our client base is matched only by the <span class="text-deep-blue font-medium">range of great content he creates</span>. Three years in, Henry remains our go-to."
+                    </blockquote>
+                    <div>
+                        <p class="font-medium text-slate-900">Harriet Green</p>
+                        <p class="text-sm text-slate-500">Founder & Director, HSG Advisory</p>
+                    </div>
+                </div>
+
+                <div class="flex-shrink-0 w-[500px] mx-4 bg-white border border-slate-200 p-8">
+                    <svg class="w-8 h-8 text-teal-700/20 mb-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    <blockquote class="text-slate-700 leading-relaxed mb-6">
+                        "Henry and I collaborated on a project to grow the SEO channel. We achieved a <span class="text-pink-red font-medium">40% increase within 6 months</span>. This test was successful enough to be extended indefinitely, thanks in large part to Henry's <span class="text-deep-blue font-medium">strong contributions across strategy, process, and content creation</span>."
+                    </blockquote>
+                    <div>
+                        <p class="font-medium text-slate-900">Quentin Rouillon</p>
+                        <p class="text-sm text-slate-500">Senior Marketing Manager, iwoca</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clarity Audit CTA -->
+    <section class="py-24 lg:py-32 bg-teal-700 text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <!-- Left: Text Content -->
+                <div>
+                    <p class="text-teal-200 uppercase tracking-[0.2em] text-xs font-medium mb-6">Start Here</p>
+                    <h2 class="font-serif text-3xl md:text-4xl mb-6">
+                        Want to see what you could achieve?
+                    </h2>
+                    <p class="text-teal-100 text-lg mb-8">
+                        Get a forensic, honest review of your current messaging to help you decide where to go next.
+                    </p>
+                    <div class="mb-8">
+                        <h3 class="font-serif text-2xl mb-1">The Clarity Audit</h3>
+                        <p class="text-3xl font-serif text-white">£875</p>
+                    </div>
+                    <p class="text-teal-100 mb-8">
+                        I'll review your homepage and core product pages against best-practices from your industry and my own insights.
+                    </p>
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-teal-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>The tailored report:</strong> A PDF scorecard identifying exactly where you are losing trust or customers.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-teal-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>The video walkthrough:</strong> A 15-minute screen recording where I explain the why behind the score.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-teal-300 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span><strong>The action plan:</strong> A prioritised list of fixes you can implement immediately.</span>
+                        </li>
+                    </ul>
+                    <a href="contact.html" class="inline-flex items-center gap-2 bg-white text-teal-800 px-8 py-4 text-sm font-medium hover:bg-teal-50 transition-colors">
+                        Book Your Audit
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Right: Loom-style Video Preview -->
+                <div class="lg:pl-8">
+                    <div class="relative">
+                        <!-- Screenshot -->
+                        <div class="rounded-lg overflow-hidden shadow-2xl border-4 border-white/10">
+                            <img src="Images/CTA/Loomview.png" alt="Clarity Audit video walkthrough preview" class="w-full h-auto">
+                        </div>
+                        <!-- Face overlay - Loom style -->
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-xl">
+                            <img src="Images/CTA/HEad.jpg" alt="Henry Bell" class="w-full h-full object-cover">
+                        </div>
+                        <!-- Play button overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                            <div class="w-16 h-16 md:w-20 md:h-20 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-6 h-6 md:w-8 md:h-8 text-teal-700 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-24 lg:py-32 relative infrastructure-pattern">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8 text-center">
+            <h2 class="font-serif text-3xl md:text-4xl text-slate-900 mb-6">
+                Ready to illuminate your messaging?
+            </h2>
+            <p class="text-slate-600 text-lg mb-10">
+                Let's discuss how strategic copywriting can help your fintech scale.
+            </p>
+            <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-700 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors">
+                Book a Strategy Call
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer class="py-8 text-center text-charcoal/40 text-sm border-t border-warm-grey mt-16">
-        <p>&copy; 2025 High Beam Digital. All rights reserved.</p>
+    <footer class="bg-slate-900 text-slate-400 py-12">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <span class="font-serif text-xl text-white">High Beam Digital</span>
+                <p class="text-sm">&copy; 2025 High Beam Digital. All rights reserved.</p>
+                <a href="https://www.linkedin.com/in/henry-c-bell/" class="text-slate-400 hover:text-white transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
