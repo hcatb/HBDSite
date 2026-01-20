@@ -1,0 +1,9 @@
+# robots.txt for High Beam Digital
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://highbeamdigital.co.uk/sitemap.xml
+
+# Disallow admin/private areas (none currently)
+# Disallow: /private/
