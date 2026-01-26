@@ -6,6 +6,9 @@
     <meta name="robots" content="noindex">
     <title>Thank You | High Beam Digital</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="Images/Logo/HBD-full-colour.png">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,6 +43,29 @@
             }
         }
     </script>
+
+    <style>
+        /* Subtle infrastructure pattern */
+        .infrastructure-pattern {
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 80% 70%, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+                radial-gradient(circle at 40% 80%, rgba(15, 23, 42, 0.02) 1px, transparent 1px);
+            background-size: 60px 60px, 80px 80px, 100px 100px;
+        }
+        .infrastructure-pattern::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image:
+                linear-gradient(90deg, transparent 49.5%, #0f172a 49.5%, #0f172a 50.5%, transparent 50.5%),
+                linear-gradient(0deg, transparent 49.5%, #0f172a 49.5%, #0f172a 50.5%, transparent 50.5%);
+            background-size: 120px 120px;
+            mask-image: radial-gradient(ellipse 80% 60% at 30% 50%, black, transparent);
+            pointer-events: none;
+        }
+    </style>
 </head>
 <body class="font-sans text-slate-900 bg-alabaster antialiased">
 
@@ -53,7 +79,7 @@
     </nav>
 
     <!-- Thank You Content -->
-    <section class="min-h-screen flex items-center justify-center pt-20 pb-24">
+    <section class="min-h-screen flex items-center justify-center pt-20 pb-24 relative infrastructure-pattern">
         <div class="max-w-xl mx-auto px-6 text-center">
             <div class="w-16 h-16 bg-teal-700 rounded-full flex items-center justify-center mx-auto mb-8">
                 <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
