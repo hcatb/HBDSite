@@ -88,6 +88,30 @@
             letter-spacing: 0.05em;
         }
 
+        .filter-tag {
+            padding: 0.5rem 1.25rem;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+            background: white;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+        .filter-tag:hover {
+            border-color: #0f766e;
+            color: #0f766e;
+        }
+        .filter-tag.active {
+            background: #0f766e;
+            border-color: #0f766e;
+            color: white;
+        }
+
+        .portfolio-card.hidden-card {
+            display: none;
+        }
+
         /* Subtle infrastructure pattern */
         .infrastructure-pattern {
             background-image:
@@ -204,13 +228,27 @@
         </div>
     </section>
 
+    <!-- Filter Tags -->
+    <section class="pt-10 pb-0">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+            <div class="flex flex-wrap gap-3">
+                <button class="filter-tag active" data-filter="all">All</button>
+                <button class="filter-tag" data-filter="payments-fx">Payments & FX</button>
+                <button class="filter-tag" data-filter="embedded-finance">Embedded Finance</button>
+                <button class="filter-tag" data-filter="infrastructure-regtech">Banking Infrastructure & RegTech</button>
+                <button class="filter-tag" data-filter="accounting-taxtech">Accounting & TaxTech</button>
+                <button class="filter-tag" data-filter="venture-capital">Venture Capital</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Portfolio Grid -->
     <section class="py-20">
         <div class="max-w-6xl mx-auto px-6 lg:px-8">
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                 <!-- Zencargo -->
-                <a href="https://www.zencargo.com/resources/red-sea-reopening-2026/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.zencargo.com/resources/red-sea-reopening-2026/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100">
                         <img src="https://www.zencargo.com/wp-content/uploads/2026/01/GettyImages-944361686.jpg" alt="Red Sea Shipping" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -224,7 +262,7 @@
                 </a>
 
                 <!-- Zencargo 2 -->
-                <a href="https://www.zencargo.com/resources/lcl-freight-what-is-it-and-how-to-use-it/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.zencargo.com/resources/lcl-freight-what-is-it-and-how-to-use-it/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/ZC_Logo_Coloured-1.png" alt="Zencargo" class="h-12 object-contain">
                     </div>
@@ -238,7 +276,7 @@
                 </a>
 
                 <!-- Calastone 1 -->
-                <a href="https://www.calastone.com/insights/strengthening-the-primary-market-australias-etf-growth-revolution/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.calastone.com/insights/strengthening-the-primary-market-australias-etf-growth-revolution/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100">
                         <img src="https://www.calastone.com/wp-content/uploads/2024/11/shutterstock_1707947281-scaled.jpg" alt="Australia ETF" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -252,7 +290,7 @@
                 </a>
 
                 <!-- iwoca 1 -->
-                <a href="https://www.iwoca.co.uk/payments/best-payment-options-for-small-businesses" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.iwoca.co.uk/payments/best-payment-options-for-small-businesses" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
                     </div>
@@ -266,7 +304,7 @@
                 </a>
 
                 <!-- Haines Watts -->
-                <a href="https://www.hwca.com/opinion/always-on-compliance-how-machine-learning-and-artificial-intelligence-will-transform-audit/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.hwca.com/opinion/always-on-compliance-how-machine-learning-and-artificial-intelligence-will-transform-audit/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="accounting-taxtech">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/HainesWatts.png" alt="Haines Watts" class="h-10 object-contain">
                     </div>
@@ -280,7 +318,7 @@
                 </a>
 
                 <!-- Deaglo 1 -->
-                <a href="https://www.deaglo.com/post/raise-against-the-machine-how-ai-will-augment-investor-instincts" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.deaglo.com/post/raise-against-the-machine-how-ai-will-augment-investor-instincts" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-10 object-contain">
                     </div>
@@ -294,7 +332,7 @@
                 </a>
 
                 <!-- iwoca 2 -->
-                <a href="https://www.iwoca.co.uk/payments/how-eft-payments-work-for-uk-businesses" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.iwoca.co.uk/payments/how-eft-payments-work-for-uk-businesses" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
                     </div>
@@ -308,7 +346,7 @@
                 </a>
 
                 <!-- Calastone 2 -->
-                <a href="https://www.calastone.com/insights/connect-forum-new-york-the-mmf-tokenisation-tipping-point/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.calastone.com/insights/connect-forum-new-york-the-mmf-tokenisation-tipping-point/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100">
                         <img src="https://www.calastone.com/wp-content/uploads/2025/10/shutterstock_2599357037.jpg" alt="Connect Forum New York" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
                     </div>
@@ -322,7 +360,7 @@
                 </a>
 
                 <!-- iwoca 3 -->
-                <a href="https://www.iwoca.co.uk/trade-credit/hokodo-vs-iwocapay-b2b-payment-solutions" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.iwoca.co.uk/trade-credit/hokodo-vs-iwocapay-b2b-payment-solutions" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
                     </div>
@@ -336,7 +374,7 @@
                 </a>
 
                 <!-- Deaglo 2 -->
-                <a href="https://www.deaglo.com/post/true-value-are-latam-currencies-undervalued" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.deaglo.com/post/true-value-are-latam-currencies-undervalued" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-10 object-contain">
                     </div>
@@ -350,7 +388,7 @@
                 </a>
 
                 <!-- iwoca 4 -->
-                <a href="https://www.iwoca.co.uk/payments/cash-flow-finance" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.iwoca.co.uk/payments/cash-flow-finance" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
                     </div>
@@ -364,7 +402,7 @@
                 </a>
 
                 <!-- iwoca 5 -->
-                <a href="https://www.iwoca.co.uk/payments/solve-cash-flow-problems-caused-by-delayed-customer-payments" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.iwoca.co.uk/payments/solve-cash-flow-problems-caused-by-delayed-customer-payments" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
                     </div>
@@ -378,7 +416,7 @@
                 </a>
 
                 <!-- Roundtable 1 -->
-                <a href="https://www.roundtable.eu/learn/scsp" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.roundtable.eu/learn/scsp" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Roundtable-logo-th-1.webp" alt="Roundtable" class="h-12 object-contain">
                     </div>
@@ -392,7 +430,7 @@
                 </a>
 
                 <!-- Roundtable 2 -->
-                <a href="https://www.roundtable.eu/spv" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.roundtable.eu/spv" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Roundtable-logo-th-1.webp" alt="Roundtable" class="h-12 object-contain">
                     </div>
@@ -406,7 +444,7 @@
                 </a>
 
                 <!-- Roundtable 3 -->
-                <a href="https://www.roundtable.eu/spv/how-to-choose-platform" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group">
+                <a href="https://www.roundtable.eu/spv/how-to-choose-platform" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
                     <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
                         <img src="Images/Client logos/Roundtable-logo-th-1.webp" alt="Roundtable" class="h-12 object-contain">
                     </div>
@@ -416,6 +454,314 @@
                             <img src="Images/Client logos/Roundtable-logo-th-1.webp" alt="Roundtable" class="h-5 object-contain">
                         </div>
                         <h3 class="font-serif text-lg text-slate-900 leading-snug">How to choose the right SPV platform for your needs</h3>
+                    </div>
+                </a>
+
+                <!-- iwoca 6 -->
+                <a href="https://www.iwoca.co.uk/tax/ttp-or-business-loan" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Embedded Finance</span>
+                            <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">HMRC Time to Pay vs Business Loans: How to Cover Your Tax Bill</h3>
+                    </div>
+                </a>
+
+                <!-- iwoca 7 -->
+                <a href="https://www.iwoca.co.uk/payments/embedded-payments" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Embedded Finance</span>
+                            <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Embedded Payments for B2B: Faster Cash Flow, Less Admin</h3>
+                    </div>
+                </a>
+
+                <!-- iwoca 8 -->
+                <a href="https://www.iwoca.co.uk/payments/ecommerce-payment-processing" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Embedded Finance</span>
+                            <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">The Ultimate Guide to Ecommerce Payment Processing</h3>
+                    </div>
+                </a>
+
+                <!-- iwoca 9 -->
+                <a href="https://www.iwoca.co.uk/business-finance/best-business-overdraft" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Embedded Finance</span>
+                            <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Which bank provides the best business overdraft</h3>
+                    </div>
+                </a>
+
+                <!-- iwoca 10 -->
+                <a href="https://www.iwoca.co.uk/finance-explained/working-capital-finance" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Embedded Finance</span>
+                            <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">How to Use Working Capital Finance</h3>
+                    </div>
+                </a>
+
+                <!-- iwoca 11 -->
+                <a href="https://www.iwoca.co.uk/finance-explained/financing-business-expansion" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="embedded-finance">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Embedded Finance</span>
+                            <img src="Images/Client logos/Iwoca_Logo_Wiki.svg.png" alt="iwoca" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Financing business expansion</h3>
+                    </div>
+                </a>
+
+                <!-- Calastone 3 -->
+                <a href="https://www.calastone.com/insights/the-end-of-buy-and-hold-how-investor-behaviour-is-reshaping-fund-management/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">The End of Buy-and-Hold? How Investor Behaviour is Reshaping Fund Management</h3>
+                    </div>
+                </a>
+
+                <!-- Calastone 4 -->
+                <a href="https://www.calastone.com/insights/navigating-the-shift-to-t1-how-europes-etf-market-must-adapt-to-a-new-era-of-settlement/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Navigating the shift to T+1: How Europe's ETF market must adapt to a new era of settlement</h3>
+                    </div>
+                </a>
+
+                <!-- Calastone 5 -->
+                <a href="https://www.calastone.com/insights/money-market-portals-the-new-battleground-for-distribution/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Money Market Portals: The New Battleground for Distribution</h3>
+                    </div>
+                </a>
+
+                <!-- Calastone 6 -->
+                <a href="https://www.calastone.com/insights/tokenisation-making-it-a-reality/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Calastone copy.png" alt="Calastone" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Tokenisation: Making it a reality</h3>
+                    </div>
+                </a>
+
+                <!-- SAP Fioneer 1 -->
+                <a href="https://www.sapfioneer.com/blog/collateral-management-through-the-decades/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Collateral management through the decades</h3>
+                    </div>
+                </a>
+
+                <!-- SAP Fioneer 2 -->
+                <a href="https://www.sapfioneer.com/blog/how-corporate-banks-are-stepping-up-in-cash-management-with-virtual-accounts/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">How corporate treasurers can use virtual account solutions</h3>
+                    </div>
+                </a>
+
+                <!-- SAP Fioneer 3 -->
+                <a href="https://www.sapfioneer.com/blog/how-insurance-ecosystems-are-shaking-up-an-entire-industry/" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="infrastructure-regtech">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Banking Infrastructure & RegTech</span>
+                            <img src="Images/Client logos/Fioneer Logo_Black and Gold_LowRes_Web_Negative.png" alt="SAP Fioneer" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">How insurance ecosystems are shaking up an entire industry</h3>
+                    </div>
+                </a>
+
+                <!-- Nium 1 -->
+                <a href="https://www.nium.com/blog/how-japan-is-opening-payments-for-cross-border-business" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/nium-logo.png" alt="Nium" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Payments & FX</span>
+                            <img src="Images/Client logos/nium-logo.png" alt="Nium" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">How Japan is Opening Payments for Cross-Border Business</h3>
+                    </div>
+                </a>
+
+                <!-- Nium 2 -->
+                <a href="https://www.nium.com/blog/is-brazil-ready-for-a-digital-cross-border-payments-boom-qa-with-christina-hutchinson-nium-latam-general-manage" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/nium-logo.png" alt="Nium" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Payments & FX</span>
+                            <img src="Images/Client logos/nium-logo.png" alt="Nium" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Is Brazil Ready for a Digital Cross-Border Payments Boom?</h3>
+                    </div>
+                </a>
+
+                <!-- Deaglo 3 -->
+                <a href="https://www.deaglo.com/post/good-morning-vietnam" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-10 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Payments & FX</span>
+                            <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Good morning, Vietnam</h3>
+                    </div>
+                </a>
+
+                <!-- Deaglo 4 -->
+                <a href="https://www.deaglo.com/post/fx-options-101-how-to-buy-and-sell-fx-options-safely" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-10 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Payments & FX</span>
+                            <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">FX Options 101: How to buy and sell FX options safely</h3>
+                    </div>
+                </a>
+
+                <!-- Deaglo 5 -->
+                <a href="https://www.deaglo.com/post/4-common-hedging-mistakes-to-avoid-in-your-business" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="payments-fx">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-10 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Payments & FX</span>
+                            <img src="Images/Client logos/Deaglo.svg" alt="Deaglo" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">4 Common Hedging Mistakes To Avoid in Your Business</h3>
+                    </div>
+                </a>
+
+                <!-- Dawn Capital 1 -->
+                <a href="https://medium.com/dawn-capital/embedding-peace-of-mind-why-we-invested-in-cover-genius-8261fd1f8efe" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="venture-capital">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Dawn capital.png" alt="Dawn Capital" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Venture Capital</span>
+                            <img src="Images/Client logos/Dawn capital.png" alt="Dawn Capital" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Embedding Peace of Mind: Why We Invested in Cover Genius</h3>
+                    </div>
+                </a>
+
+                <!-- Dawn Capital 2 -->
+                <a href="https://medium.com/@dawncapitalteam/to-usage-based-pricing-and-beyond-a669f6988879" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="venture-capital">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Dawn capital.png" alt="Dawn Capital" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Venture Capital</span>
+                            <img src="Images/Client logos/Dawn capital.png" alt="Dawn Capital" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">To Usage-Based Pricing and Beyond</h3>
+                    </div>
+                </a>
+
+                <!-- Creandum -->
+                <a href="https://blog.creandum.com/knocking-on-wood-why-were-backing-timberhub-to-redefine-timber-trading-f2d8e7db4ae0" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="venture-capital">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/Creandum_logo_green.png" alt="Creandum" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Venture Capital</span>
+                            <img src="Images/Client logos/Creandum_logo_green.png" alt="Creandum" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">Knocking on Wood: Why We're Backing Timberhub to Redefine Timber Trading</h3>
+                    </div>
+                </a>
+
+                <!-- EQT Ventures -->
+                <a href="https://stories.eqtventures.com/articles/how-ai-is-changing-customer-care-forever" target="_blank" rel="noopener" class="portfolio-card bg-white border border-slate-200 overflow-hidden group" data-category="venture-capital">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100 flex items-center justify-center">
+                        <img src="Images/Client logos/logo-eqtventures-600x_320.png" alt="EQT Ventures" class="h-12 object-contain">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-3">
+                            <span class="sector-tag uppercase font-semibold text-teal-700">Venture Capital</span>
+                            <img src="Images/Client logos/logo-eqtventures-600x_320.png" alt="EQT Ventures" class="h-5 object-contain">
+                        </div>
+                        <h3 class="font-serif text-lg text-slate-900 leading-snug">How AI Is Changing Customer Care Forever</h3>
                     </div>
                 </a>
 
@@ -507,6 +853,24 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
+
+        // Portfolio filter
+        const filterTags = document.querySelectorAll('.filter-tag');
+        const portfolioCards = document.querySelectorAll('.portfolio-card');
+        filterTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                filterTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                const filter = tag.dataset.filter;
+                portfolioCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.classList.remove('hidden-card');
+                    } else {
+                        card.classList.add('hidden-card');
+                    }
+                });
+            });
+        });
 
         // Mobile dropdown toggle
         const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
