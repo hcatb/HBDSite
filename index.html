@@ -399,12 +399,12 @@
 
                     <!-- CTA -->
                     <div class="flex flex-wrap items-center gap-5">
-                        <a href="contact.html" class="inline-flex items-center gap-2 bg-teal-700 text-white px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors">
-                            Book a Strategy Call
+                        <button onclick="openContactModal()" class="inline-flex items-center gap-2 bg-teal-700 text-white px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors">
+                            Get in Touch
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                             </svg>
-                        </a>
+                        </button>
                         <a href="#services" class="elegant-link text-sm font-medium text-coral-500 hover:text-slate-900 transition-colors">
                             View Services
                         </a>
@@ -1067,5 +1067,90 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Contact Modal -->
+    <div id="contact-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeContactModal()"></div>
+        <div class="relative bg-white w-full max-w-2xl shadow-2xl">
+            <div class="flex items-center justify-between p-6 border-b border-slate-100">
+                <h2 class="font-serif text-2xl text-slate-900">Get in touch</h2>
+                <button onclick="closeContactModal()" class="text-slate-400 hover:text-slate-700 transition-colors p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                    <!-- Email -->
+                    <a href="mailto:henry@highbeamdigital.co.uk" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
+                        <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-teal-200 transition-colors">
+                            <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900">Email me</p>
+                            <p class="text-xs text-slate-500 mt-0.5 leading-tight">henry@highbeam<br>digital.co.uk</p>
+                        </div>
+                    </a>
+                    <!-- Send a message -->
+                    <a href="contact.html" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
+                        <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-teal-200 transition-colors">
+                            <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900">Send a message</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Reply within 24 hours</p>
+                        </div>
+                    </a>
+                    <!-- Book a chat -->
+                    <a href="contact.html#book" onclick="closeContactModal()" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
+                        <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-teal-200 transition-colors">
+                            <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900">Book a chat</p>
+                            <p class="text-xs text-slate-500 mt-0.5">15 min, no obligation</p>
+                        </div>
+                    </a>
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/447765985627" target="_blank" rel="noopener" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-green-500 hover:bg-white transition-all group">
+                        <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-green-200 transition-colors">
+                            <svg class="w-4 h-4 text-teal-700 group-hover:text-green-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-slate-900">WhatsApp</p>
+                            <p class="text-xs text-slate-500 mt-0.5">Message me directly</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeContactModal() {
+            const modal = document.getElementById('contact-modal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeContactModal();
+        });
+    </script>
 </body>
 </html>
