@@ -287,111 +287,144 @@
 
     <!-- Contact Section -->
     <section class="pt-32 pb-24 relative infrastructure-pattern">
-        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8">
 
             <!-- Header -->
-            <div class="max-w-2xl mb-16">
+            <div class="text-center mb-16">
                 <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-700 mb-4">Get in Touch</p>
                 <h1 class="font-serif text-4xl md:text-5xl leading-tight text-slate-900 mb-6">
                     Let's start a conversation
                 </h1>
-                <p class="text-lg text-slate-600 leading-relaxed">
+                <p class="text-lg text-slate-600 leading-relaxed max-w-xl mx-auto">
                     Whether you're looking for a full messaging overhaul, a clarity audit, or just want to explore how strategic copywriting could help your fintech grow, I'd love to hear from you.
                 </p>
             </div>
 
-            <!-- Two Options -->
-            <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Four equal options -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
 
-                <!-- Option 1: Send a message -->
-                <div class="bg-white border border-slate-200 p-8 lg:p-10">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-teal-50 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="font-serif text-2xl text-slate-900">Send a message</h2>
-                            <p class="text-slate-500 text-sm mt-0.5">I'll reply within 24 hours</p>
-                        </div>
+                <!-- Email -->
+                <a href="mailto:henry@highbeamdigital.co.uk" class="contact-option-card bg-white border border-slate-200 p-6 flex flex-col items-center text-center gap-4 hover:border-teal-700 hover:shadow-md transition-all cursor-pointer group">
+                    <div class="w-12 h-12 bg-teal-50 flex items-center justify-center group-hover:bg-teal-100 transition-colors">
+                        <svg class="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
                     </div>
-
-                    <form id="contact-form" action="https://formsubmit.co/hcatbell@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New enquiry from High Beam Digital website">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://highbeamdigital.co.uk/thank-you.html">
-                        <input type="text" name="_honey" style="display:none">
-
-                        <div class="space-y-5">
-                            <div class="form-group">
-                                <label for="name" class="form-label">Name <span class="required">*</span></label>
-                                <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
-                                <p class="error-message">Please enter your name</p>
-                            </div>
-                            <div class="form-group">
-                                <label for="company" class="form-label">Company <span class="required">*</span></label>
-                                <input type="text" id="company" name="company" class="form-input" placeholder="Your company name" required>
-                                <p class="error-message">Please enter your company name</p>
-                            </div>
-                            <div class="form-group">
-                                <label for="sector" class="form-label">Sector <span class="required">*</span></label>
-                                <input type="text" id="sector" name="sector" class="form-input" placeholder="e.g. Payments, Embedded Finance, WealthTech" required>
-                                <p class="error-message">Please enter your sector</p>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="form-label">What you need <span class="required">*</span></label>
-                                <textarea id="message" name="message" rows="5" class="form-input resize-none" placeholder="Tell me about your project or what you're looking to achieve..." required></textarea>
-                                <p class="error-message">Please describe what you need</p>
-                            </div>
-                            <button type="submit" class="w-full bg-teal-700 text-white py-4 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors flex items-center justify-center gap-2">
-                                Send Message
-                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-
-                <!-- Option 2: Book a chat -->
-                <div class="bg-white border border-slate-200 p-8 lg:p-10">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-10 h-10 bg-teal-50 flex items-center justify-center shrink-0">
-                            <svg class="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h2 class="font-serif text-2xl text-slate-900">Book a chat</h2>
-                            <p class="text-slate-500 text-sm mt-0.5">30 minutes, no obligation</p>
-                        </div>
+                    <div>
+                        <p class="font-medium text-slate-900 mb-1">Email me</p>
+                        <p class="text-xs text-slate-500">henry@highbeamdigital.co.uk</p>
                     </div>
-                    <!-- Calendly inline widget -->
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/highbeamdigital" style="min-width:280px;height:660px;"></div>
-                </div>
+                </a>
+
+                <!-- Send a message -->
+                <button onclick="openModal('form-modal')" class="contact-option-card bg-white border border-slate-200 p-6 flex flex-col items-center text-center gap-4 hover:border-teal-700 hover:shadow-md transition-all cursor-pointer group w-full">
+                    <div class="w-12 h-12 bg-teal-50 flex items-center justify-center group-hover:bg-teal-100 transition-colors">
+                        <svg class="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium text-slate-900 mb-1">Send a message</p>
+                        <p class="text-xs text-slate-500">I'll reply within 24 hours</p>
+                    </div>
+                </button>
+
+                <!-- Book a chat -->
+                <button onclick="openModal('calendly-modal')" class="contact-option-card bg-white border border-slate-200 p-6 flex flex-col items-center text-center gap-4 hover:border-teal-700 hover:shadow-md transition-all cursor-pointer group w-full">
+                    <div class="w-12 h-12 bg-teal-50 flex items-center justify-center group-hover:bg-teal-100 transition-colors">
+                        <svg class="w-5 h-5 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium text-slate-900 mb-1">Book a chat</p>
+                        <p class="text-xs text-slate-500">30 minutes, no obligation</p>
+                    </div>
+                </button>
+
+                <!-- WhatsApp -->
+                <a href="https://wa.me/447765985627" target="_blank" rel="noopener" class="contact-option-card bg-white border border-slate-200 p-6 flex flex-col items-center text-center gap-4 hover:border-green-500 hover:shadow-md transition-all cursor-pointer group">
+                    <div class="w-12 h-12 bg-teal-50 flex items-center justify-center group-hover:bg-green-50 transition-colors">
+                        <svg class="w-5 h-5 text-teal-700 group-hover:text-green-600 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <p class="font-medium text-slate-900 mb-1">WhatsApp</p>
+                        <p class="text-xs text-slate-500">Message me directly</p>
+                    </div>
+                </a>
 
             </div>
-
-            <!-- Direct contact -->
-            <div class="mt-10 flex flex-wrap gap-4 items-center">
-                <span class="text-sm text-slate-400">Or reach me directly:</span>
-                <a href="mailto:henry@highbeamdigital.co.uk" class="inline-flex items-center gap-2 border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 hover:border-teal-700 hover:text-teal-700 transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                    </svg>
-                    henry@highbeamdigital.co.uk
-                </a>
-                <a href="https://wa.me/447765985627" target="_blank" rel="noopener" class="inline-flex items-center gap-2 border border-slate-200 bg-white px-5 py-3 text-sm font-medium text-slate-700 hover:border-green-600 hover:text-green-600 transition-colors">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                    WhatsApp
-                </a>
-            </div>
-
         </div>
     </section>
+
+    <!-- Form Modal -->
+    <div id="form-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('form-modal')"></div>
+        <div class="relative bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="flex items-center justify-between p-6 border-b border-slate-100">
+                <h2 class="font-serif text-2xl text-slate-900">Send a message</h2>
+                <button onclick="closeModal('form-modal')" class="text-slate-400 hover:text-slate-700 transition-colors p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <form id="contact-form" action="https://formsubmit.co/hcatbell@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New enquiry from High Beam Digital website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://highbeamdigital.co.uk/thank-you.html">
+                    <input type="text" name="_honey" style="display:none">
+                    <div class="space-y-5">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your full name" required>
+                            <p class="error-message">Please enter your name</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="company" class="form-label">Company <span class="required">*</span></label>
+                            <input type="text" id="company" name="company" class="form-input" placeholder="Your company name" required>
+                            <p class="error-message">Please enter your company name</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="sector" class="form-label">Sector <span class="required">*</span></label>
+                            <input type="text" id="sector" name="sector" class="form-input" placeholder="e.g. Payments, Embedded Finance, WealthTech" required>
+                            <p class="error-message">Please enter your sector</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">What you need <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" class="form-input resize-none" placeholder="Tell me about your project or what you're looking to achieve..." required></textarea>
+                            <p class="error-message">Please describe what you need</p>
+                        </div>
+                        <button type="submit" class="w-full bg-teal-700 text-white py-4 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors flex items-center justify-center gap-2">
+                            Send Message
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendly Modal -->
+    <div id="calendly-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeModal('calendly-modal')"></div>
+        <div class="relative bg-white w-full max-w-3xl shadow-2xl">
+            <div class="flex items-center justify-between p-6 border-b border-slate-100">
+                <h2 class="font-serif text-2xl text-slate-900">Book a chat</h2>
+                <button onclick="closeModal('calendly-modal')" class="text-slate-400 hover:text-slate-700 transition-colors p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendly-inline-widget" data-url="https://calendly.com/highbeamdigital" style="min-width:280px;height:660px;"></div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-16">
@@ -457,54 +490,54 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-
         if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
+            mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
         }
 
         // Mobile dropdown toggle
-        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-        mobileDropdowns.forEach(dropdown => {
+        document.querySelectorAll('.mobile-dropdown').forEach(dropdown => {
             const trigger = dropdown.querySelector('.mobile-dropdown-trigger');
-            if (trigger) {
-                trigger.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    dropdown.classList.toggle('active');
-                });
+            if (trigger) trigger.addEventListener('click', (e) => {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+            });
+        });
+
+        // Modal open/close
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                ['form-modal', 'calendly-modal'].forEach(closeModal);
             }
         });
 
         // Form validation
         const form = document.getElementById('contact-form');
         const formGroups = form.querySelectorAll('.form-group');
-
         form.addEventListener('submit', (e) => {
             let isValid = true;
-
             formGroups.forEach(group => {
                 const input = group.querySelector('.form-input');
-                if (!input.value.trim()) {
-                    group.classList.add('invalid');
-                    isValid = false;
-                } else {
-                    group.classList.remove('invalid');
-                }
+                if (!input.value.trim()) { group.classList.add('invalid'); isValid = false; }
+                else group.classList.remove('invalid');
             });
-
-            if (!isValid) {
-                e.preventDefault();
-            }
+            if (!isValid) e.preventDefault();
         });
-
-        // Remove invalid state on input
         formGroups.forEach(group => {
             const input = group.querySelector('.form-input');
             input.addEventListener('input', () => {
-                if (input.value.trim()) {
-                    group.classList.remove('invalid');
-                }
+                if (input.value.trim()) group.classList.remove('invalid');
             });
         });
     </script>
