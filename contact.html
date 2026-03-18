@@ -422,7 +422,7 @@
                     </svg>
                 </button>
             </div>
-            <div class="calendly-inline-widget" data-url="https://calendly.com/highbeamdigital/15min" style="min-width:280px;height:660px;"></div>
+            <div class="calendly-inline-widget" style="min-width:280px;height:660px;"></div>
         </div>
     </div>
 
@@ -509,6 +509,11 @@
             modal.classList.remove('hidden');
             modal.classList.add('flex');
             document.body.style.overflow = 'hidden';
+            if (id === 'calendly-modal') {
+                const el = modal.querySelector('.calendly-inline-widget');
+                el.innerHTML = '';
+                Calendly.initInlineWidget({ url: 'https://calendly.com/highbeamdigital/15min', parentElement: el });
+            }
         }
         function closeModal(id) {
             const modal = document.getElementById(id);

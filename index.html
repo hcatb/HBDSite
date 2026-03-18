@@ -51,6 +51,9 @@
     }
     </script>
 
+    <!-- Calendly -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -285,6 +288,29 @@
         }
         .industry-arrow {
             transition: transform 0.3s ease;
+        }
+
+        /* Modal form inputs */
+        .form-input {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1px solid #e2e8f0;
+            background: white;
+            font-size: 0.9375rem;
+            transition: all 0.2s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #0f766e;
+            box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1);
+        }
+        .form-input::placeholder { color: #94a3b8; }
+        .form-label {
+            display: block;
+            font-size: 0.8125rem;
+            font-weight: 500;
+            color: #334155;
+            margin-bottom: 0.5rem;
         }
     </style>
 </head>
@@ -1026,6 +1052,7 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="index.html#services" class="hover:text-white transition-colors">All Services</a></li>
                         <li><a href="fractional-content-lead.html" class="hover:text-white transition-colors">Fractional Content Lead</a></li>
+                        <li><a href="linkedin-ghostwriting.html" class="hover:text-white transition-colors">LinkedIn Ghostwriting</a></li>
                     </ul>
                 </div>
 
@@ -1095,7 +1122,7 @@
                         </div>
                     </a>
                     <!-- Send a message -->
-                    <a href="contact.html" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
+                    <button onclick="openSubModal('index-form-modal')" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
                         <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-teal-200 transition-colors">
                             <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
@@ -1105,9 +1132,9 @@
                             <p class="text-sm font-medium text-slate-900">Send a message</p>
                             <p class="text-xs text-slate-500 mt-0.5">Reply within 24 hours</p>
                         </div>
-                    </a>
+                    </button>
                     <!-- Book a chat -->
-                    <a href="contact.html#book" onclick="closeContactModal()" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
+                    <button onclick="openSubModal('index-calendly-modal')" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-teal-700 hover:bg-white transition-all group">
                         <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-teal-200 transition-colors">
                             <svg class="w-4 h-4 text-teal-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
@@ -1117,7 +1144,7 @@
                             <p class="text-sm font-medium text-slate-900">Book a chat</p>
                             <p class="text-xs text-slate-500 mt-0.5">15 min, no obligation</p>
                         </div>
-                    </a>
+                    </button>
                     <!-- WhatsApp -->
                     <a href="https://wa.me/447765985627" target="_blank" rel="noopener" class="bg-slate-50 border border-slate-200 p-5 flex flex-col items-center text-center gap-3 hover:border-green-500 hover:bg-white transition-all group">
                         <div class="w-10 h-10 bg-white border border-slate-200 flex items-center justify-center group-hover:border-green-200 transition-colors">
@@ -1135,6 +1162,69 @@
         </div>
     </div>
 
+    <!-- Form Sub-Modal -->
+    <div id="index-form-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeSubModal('index-form-modal')"></div>
+        <div class="relative bg-white w-full max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
+            <div class="flex items-center justify-between p-6 border-b border-slate-100">
+                <h2 class="font-serif text-2xl text-slate-900">Send a message</h2>
+                <button onclick="closeSubModal('index-form-modal')" class="text-slate-400 hover:text-slate-700 transition-colors p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <form action="https://formsubmit.co/hcatbell@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New enquiry from High Beam Digital website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="https://highbeamdigital.co.uk/thank-you.html">
+                    <input type="text" name="_honey" style="display:none">
+                    <div class="space-y-5">
+                        <div>
+                            <label class="form-label">Name <span style="color:#ef4444">*</span></label>
+                            <input type="text" name="name" class="form-input" placeholder="Your full name" required>
+                        </div>
+                        <div>
+                            <label class="form-label">Company <span style="color:#ef4444">*</span></label>
+                            <input type="text" name="company" class="form-input" placeholder="Your company name" required>
+                        </div>
+                        <div>
+                            <label class="form-label">Sector <span style="color:#ef4444">*</span></label>
+                            <input type="text" name="sector" class="form-input" placeholder="e.g. Payments, Embedded Finance, WealthTech" required>
+                        </div>
+                        <div>
+                            <label class="form-label">What you need <span style="color:#ef4444">*</span></label>
+                            <textarea name="message" rows="5" class="form-input resize-none" placeholder="Tell me about your project or what you're looking to achieve..." required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-teal-700 text-white py-4 text-sm font-medium tracking-wide hover:bg-teal-800 transition-colors flex items-center justify-center gap-2">
+                            Send Message
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Calendly Sub-Modal -->
+    <div id="index-calendly-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" onclick="closeSubModal('index-calendly-modal')"></div>
+        <div class="relative bg-white w-full max-w-3xl shadow-2xl">
+            <div class="flex items-center justify-between p-6 border-b border-slate-100">
+                <h2 class="font-serif text-2xl text-slate-900">Book a chat</h2>
+                <button onclick="closeSubModal('index-calendly-modal')" class="text-slate-400 hover:text-slate-700 transition-colors p-1">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="calendly-inline-widget" style="min-width:280px;height:660px;"></div>
+        </div>
+    </div>
+
     <script>
         function openContactModal() {
             const modal = document.getElementById('contact-modal');
@@ -1148,9 +1238,32 @@
             modal.classList.remove('flex');
             document.body.style.overflow = '';
         }
+        function openSubModal(id) {
+            closeContactModal();
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            if (id === 'index-calendly-modal') {
+                const el = modal.querySelector('.calendly-inline-widget');
+                el.innerHTML = '';
+                Calendly.initInlineWidget({ url: 'https://calendly.com/highbeamdigital/15min', parentElement: el });
+            }
+        }
+        function closeSubModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            document.body.style.overflow = '';
+        }
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeContactModal();
+            if (e.key === 'Escape') {
+                closeContactModal();
+                closeSubModal('index-form-modal');
+                closeSubModal('index-calendly-modal');
+            }
         });
     </script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
