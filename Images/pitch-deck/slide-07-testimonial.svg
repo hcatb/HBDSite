@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="#000998"/>
+
+  <!-- Subtle texture rectangle -->
+  <rect x="700" y="-100" width="500" height="600" fill="#0f172a" opacity="0.3" transform="rotate(10 950 200)"/>
+
+  <!-- Giant quote marks -->
+  <text x="60" y="280" font-family="Georgia, 'Times New Roman', serif" font-size="220" fill="#0f766e" opacity="0.35">"</text>
+
+  <!-- Quote text -->
+  <text x="72" y="380" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">We couldn't ask for a more flexible</text>
+  <text x="72" y="430" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">partner. A consummately safe pair of</text>
+  <text x="72" y="480" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">hands, his adaptability across our client</text>
+  <text x="72" y="530" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">base is matched only by the range of</text>
+  <text x="72" y="580" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">great content he creates.</text>
+
+  <!-- Closing quote -->
+  <text x="72" y="632" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">Three years in, Henry remains</text>
+  <text x="72" y="682" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-style="italic" fill="#f8fafc">our go-to."</text>
+
+  <!-- Divider -->
+  <rect x="72" y="714" width="60" height="1.5" fill="#0f766e"/>
+
+  <!-- Attribution -->
+  <text x="72" y="756" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" font-weight="600" fill="#f8fafc">Harriet Green</text>
+  <text x="72" y="784" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#93c5fd">Founder &amp; Director, HSG Advisory</text>
+
+  <!-- Footer -->
+  <text x="72" y="1053" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#3b82f6" letter-spacing="0.5">highbeamdigital.co.uk</text>
+  <text x="1008" y="1053" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#3b82f6" text-anchor="end">07 / 08</text>
+
+  <!-- Bottom colour bar -->
+  <rect x="0" y="1068" width="720" height="12" fill="#0f766e"/>
+  <rect x="720" y="1068" width="360" height="12" fill="#0f172a"/>
+</svg>

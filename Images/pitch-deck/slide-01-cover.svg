@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="#0f172a"/>
+
+  <!-- Decorative rectangles top-right -->
+  <rect x="820" y="-100" width="380" height="480" fill="#0f766e" opacity="0.10" transform="rotate(14 1010 140)"/>
+  <rect x="890" y="30" width="300" height="380" fill="#000998" opacity="0.18" transform="rotate(14 1040 220)"/>
+
+  <!-- Left accent bar -->
+  <rect x="72" y="295" width="4" height="110" fill="#0f766e"/>
+
+  <!-- Eyebrow -->
+  <text x="92" y="328" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="4" fill="#0f766e">HIGH BEAM DIGITAL</text>
+
+  <!-- Headline -->
+  <text x="72" y="460" font-family="Georgia, 'Times New Roman', serif" font-size="86" fill="#f8fafc">Strategic</text>
+  <text x="72" y="558" font-family="Georgia, 'Times New Roman', serif" font-size="86" fill="#f8fafc">Messaging</text>
+  <text x="72" y="656" font-family="Georgia, 'Times New Roman', serif" font-size="86" fill="#0f766e">for B2B Fintech.</text>
+
+  <!-- Divider -->
+  <rect x="72" y="694" width="90" height="1.5" fill="#0f766e" opacity="0.5"/>
+
+  <!-- Subheading -->
+  <text x="72" y="736" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" fill="#94a3b8">Copy, strategy &amp; fractional content lead</text>
+  <text x="72" y="772" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Henry Bell</text>
+
+  <!-- Footer text -->
+  <text x="72" y="1053" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#334155" letter-spacing="0.5">highbeamdigital.co.uk</text>
+  <text x="1008" y="1053" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#334155" text-anchor="end">01 / 08</text>
+
+  <!-- Bottom colour bar -->
+  <rect x="0" y="1068" width="720" height="12" fill="#0f766e"/>
+  <rect x="720" y="1068" width="360" height="12" fill="#000998"/>
+</svg>

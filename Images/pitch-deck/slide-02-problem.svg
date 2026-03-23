@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1080" viewBox="0 0 1080 1080">
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="#fafaf8"/>
+
+  <!-- Subtle border -->
+  <rect x="1" y="1" width="1078" height="1066" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+
+  <!-- Left accent bar -->
+  <rect x="72" y="255" width="4" height="380" fill="#0f766e"/>
+
+  <!-- Eyebrow -->
+  <text x="96" y="285" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" letter-spacing="4" fill="#0f766e">THE CHALLENGE</text>
+
+  <!-- Main quote -->
+  <text x="96" y="370" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#0f172a">Fintech should be</text>
+  <text x="96" y="440" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#0f172a">magic, not mundane.</text>
+
+  <!-- Divider -->
+  <rect x="96" y="475" width="60" height="1.5" fill="#0f766e" opacity="0.4"/>
+
+  <!-- Body copy -->
+  <text x="96" y="522" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="27" fill="#334155">But when your product is complex,</text>
+  <text x="96" y="560" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="27" fill="#334155">marketing gets stuck in explanation.</text>
+  <text x="96" y="616" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="27" fill="#64748b">Prospects stall. Pipeline slows.</text>
+  <text x="96" y="654" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="27" fill="#64748b">Revenue gets left on the table.</text>
+
+  <!-- Resolution -->
+  <text x="96" y="740" font-family="Georgia, 'Times New Roman', serif" font-size="42" fill="#0f766e">I fix that.</text>
+
+  <!-- Footer -->
+  <text x="72" y="1053" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8" letter-spacing="0.5">highbeamdigital.co.uk</text>
+  <text x="1008" y="1053" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="end">02 / 08</text>
+
+  <!-- Bottom colour bar -->
+  <rect x="0" y="1068" width="720" height="12" fill="#0f766e"/>
+  <rect x="720" y="1068" width="360" height="12" fill="#000998"/>
+</svg>
