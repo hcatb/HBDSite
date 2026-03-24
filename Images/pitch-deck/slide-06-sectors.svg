@@ -1,59 +1,86 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
-  <rect width="1920" height="1080" fill="#0f172a"/>
+  <!-- LIGHT SLIDE -->
+  <rect width="1920" height="1080" fill="#fafaf8"/>
+  <rect x="1" y="1" width="1918" height="1066" fill="none" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- Right decorative panel -->
-  <rect x="1100" y="0" width="820" height="1080" fill="#000998" opacity="0.12"/>
-  <rect x="1098" y="0" width="4" height="1080" fill="#0f766e" opacity="0.3"/>
+  <!-- Dark right panel -->
+  <rect x="1060" y="0" width="860" height="1080" fill="#0f172a"/>
 
+  <!-- Teal divider strip -->
+  <rect x="1058" y="0" width="4" height="1080" fill="#0f766e"/>
+
+  <!-- LEFT — Sectors -->
   <!-- Eyebrow -->
-  <text x="120" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4.5" fill="#0f766e">SECTORS</text>
-  <rect x="120" y="126" width="70" height="1.5" fill="#0f766e" opacity="0.4"/>
+  <text x="100" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="4.5" fill="#0f766e">SECTORS I SPECIALISE IN</text>
+  <rect x="100" y="124" width="60" height="1.5" fill="#0f766e" opacity="0.4"/>
 
   <!-- Headline -->
-  <text x="120" y="202" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#f8fafc">Deep specialism.</text>
-  <text x="120" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#f8fafc">No generalist gaps.</text>
+  <text x="100" y="200" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#0f172a">Deep specialism.</text>
+  <text x="100" y="268" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#0f172a">No generalist gaps.</text>
 
-  <!-- Full divider -->
-  <rect x="120" y="308" width="900" height="1" fill="#1e293b"/>
+  <!-- Divider -->
+  <rect x="100" y="306" width="880" height="1" fill="#e2e8f0"/>
 
   <!-- Sector list -->
-  <circle cx="136" cy="378" r="5" fill="#0f766e"/>
-  <text x="162" y="386" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Payments &amp; FX</text>
+  <circle cx="116" cy="374" r="5" fill="#0f766e"/>
+  <text x="142" y="382" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#0f172a">Payments &amp; FX</text>
 
-  <circle cx="136" cy="456" r="5" fill="#0f766e"/>
-  <text x="162" y="464" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Embedded finance &amp; lending</text>
+  <circle cx="116" cy="450" r="5" fill="#0f766e"/>
+  <text x="142" y="458" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#0f172a">Embedded finance &amp; lending</text>
 
-  <circle cx="136" cy="534" r="5" fill="#0f766e"/>
-  <text x="162" y="542" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Banking infrastructure &amp; RegTech</text>
+  <circle cx="116" cy="526" r="5" fill="#0f766e"/>
+  <text x="142" y="534" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#0f172a">Banking infrastructure &amp; RegTech</text>
 
-  <circle cx="136" cy="612" r="5" fill="#0f766e"/>
-  <text x="162" y="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Accounting &amp; tax tech</text>
+  <circle cx="116" cy="602" r="5" fill="#0f766e"/>
+  <text x="142" y="610" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#0f172a">Accounting &amp; tax tech</text>
 
-  <circle cx="136" cy="690" r="5" fill="#0f766e"/>
-  <text x="162" y="698" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Capital markets &amp; fund infrastructure</text>
+  <circle cx="116" cy="678" r="5" fill="#0f766e"/>
+  <text x="142" y="686" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="30" fill="#0f172a">Capital markets &amp; fund infrastructure</text>
 
   <!-- Divider before quote -->
-  <rect x="120" y="752" width="900" height="1" fill="#1e293b"/>
+  <rect x="100" y="726" width="880" height="1" fill="#e2e8f0"/>
 
   <!-- Quote -->
-  <text x="120" y="810" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic" fill="#64748b">"From payment rails to PSD3, tokenisation to treasury</text>
-  <text x="120" y="848" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic" fill="#64748b">— I simplify without dumbing down."</text>
+  <text x="100" y="786" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#64748b">"From payment rails to PSD3, tokenisation to treasury</text>
+  <text x="100" y="822" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-style="italic" fill="#64748b">— I simplify without dumbing down."</text>
 
-  <!-- Right panel content -->
-  <text x="1160" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="3" fill="#0f766e">REPRESENTATIVE CLIENTS</text>
-  <rect x="1160" y="356" width="60" height="1.5" fill="#0f766e" opacity="0.4"/>
+  <!-- RIGHT PANEL — Client list -->
+  <text x="1120" y="180" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="3" fill="#0f766e">REPRESENTATIVE CLIENTS</text>
+  <rect x="1120" y="196" width="60" height="1.5" fill="#0f766e" opacity="0.4"/>
 
-  <text x="1160" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">iwoca · YouLend · Nium</text>
-  <text x="1160" y="460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">SAP Fioneer · Calastone</text>
-  <text x="1160" y="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">MSCI · Dext · Payconiq</text>
-  <text x="1160" y="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">Finshape · Haines Watts</text>
-  <text x="1160" y="580" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">Zencargo</text>
+  <!-- Client rows with descriptors -->
+  <text x="1120" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">iwoca</text>
+  <text x="1340" y="268" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">UK's largest SME lender · 2yr SEO retainer</text>
+
+  <text x="1120" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">YouLend</text>
+  <text x="1340" y="330" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Embedded lending · 2yr+ retainer</text>
+
+  <text x="1120" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">SAP Fioneer</text>
+  <text x="1340" y="392" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Banking transformation · 2.5yr retainer</text>
+
+  <text x="1120" y="454" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">Calastone</text>
+  <text x="1340" y="454" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Fund infrastructure, DLT &amp; tokenisation</text>
+
+  <text x="1120" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">MSCI</text>
+  <text x="1340" y="516" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Risk analytics, ESG &amp; carbon credit trading</text>
+
+  <text x="1120" y="578" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">Nium</text>
+  <text x="1340" y="578" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Global payments infrastructure</text>
+
+  <text x="1120" y="640" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">Dext</text>
+  <text x="1340" y="640" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Accounting SaaS · 3.5yr in-house</text>
+
+  <text x="1120" y="702" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">Zencargo</text>
+  <text x="1340" y="702" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="18" fill="#475569">Supply chain · 5yr relationship</text>
+
+  <text x="1120" y="764" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">Payconiq · Finshape</text>
+  <text x="1120" y="800" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">Haines Watts</text>
 
   <!-- Footer -->
-  <text x="120" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b">highbeamdigital.co.uk</text>
-  <text x="1800" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="end">06 / 07</text>
+  <text x="100" y="1052" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8">highbeamdigital.co.uk</text>
+  <text x="1820" y="1052" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#334155" text-anchor="end">06 / 07</text>
 
   <!-- Bottom colour bar -->
-  <rect x="0" y="1070" width="1280" height="10" fill="#0f766e"/>
-  <rect x="1280" y="1070" width="640" height="10" fill="#000998"/>
+  <rect x="0" y="1068" width="1280" height="12" fill="#0f766e"/>
+  <rect x="1280" y="1068" width="640" height="12" fill="#000998"/>
 </svg>

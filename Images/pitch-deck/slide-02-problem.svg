@@ -1,33 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
   <rect width="1920" height="1080" fill="#0f172a"/>
 
-  <!-- Large decorative quote mark -->
-  <text x="80" y="380" font-family="Georgia, 'Times New Roman', serif" font-size="320" fill="#0f766e" opacity="0.07">"</text>
+  <!-- Giant decorative quote mark -->
+  <text x="60" y="480" font-family="Georgia, 'Times New Roman', serif" font-size="400" fill="#0f766e" opacity="0.06">"</text>
 
   <!-- Left accent bar -->
-  <rect x="120" y="160" width="5" height="720" fill="#0f766e"/>
+  <rect x="100" y="150" width="5" height="730" fill="#0f766e"/>
 
   <!-- Eyebrow -->
-  <text x="148" y="196" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4.5" fill="#0f766e">THE PROBLEM</text>
+  <text x="128" y="186" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="4.5" fill="#0f766e">THE PROBLEM</text>
 
   <!-- Quote text -->
-  <text x="148" y="308" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-style="italic" fill="#f8fafc">Fintech marketing teams face the same problem:</text>
-  <text x="148" y="376" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-style="italic" fill="#f8fafc">senior people don't have time to write, junior people</text>
-  <text x="148" y="444" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-style="italic" fill="#f8fafc">don't have the subject matter depth, and AI can't</text>
-  <text x="148" y="512" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-style="italic" fill="#f8fafc">bridge the gap when your audience knows more</text>
-  <text x="148" y="580" font-family="Georgia, 'Times New Roman', serif" font-size="52" font-style="italic" fill="#f8fafc">than most writers."</text>
+  <text x="128" y="310" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-style="italic" fill="#f8fafc">Fintech marketing teams face the same problem:</text>
+  <text x="128" y="380" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-style="italic" fill="#f8fafc">senior people don't have time to write, junior people</text>
+  <text x="128" y="450" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-style="italic" fill="#f8fafc">don't have the subject matter depth, and AI can't</text>
+  <text x="128" y="520" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-style="italic" fill="#f8fafc">bridge the gap when your audience knows more</text>
+  <text x="128" y="590" font-family="Georgia, 'Times New Roman', serif" font-size="54" font-style="italic" fill="#94a3b8">than most writers."</text>
 
   <!-- Divider -->
-  <rect x="148" y="622" width="80" height="1.5" fill="#0f766e" opacity="0.5"/>
+  <rect x="128" y="634" width="80" height="1.5" fill="#0f766e" opacity="0.5"/>
 
-  <!-- Resolution -->
-  <text x="148" y="692" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#0f766e">I fix that.</text>
+  <!-- Subline -->
+  <text x="128" y="706" font-family="Georgia, 'Times New Roman', serif" font-size="62" fill="#0f766e">I fix that.</text>
 
   <!-- Footer -->
-  <text x="120" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b">highbeamdigital.co.uk</text>
-  <text x="1800" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="end">02 / 07</text>
+  <text x="100" y="1052" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#1e293b">highbeamdigital.co.uk</text>
+  <text x="1820" y="1052" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="end">02 / 07</text>
 
   <!-- Bottom colour bar -->
-  <rect x="0" y="1070" width="1280" height="10" fill="#0f766e"/>
-  <rect x="1280" y="1070" width="640" height="10" fill="#000998"/>
+  <rect x="0" y="1068" width="1280" height="12" fill="#0f766e"/>
+  <rect x="1280" y="1068" width="640" height="12" fill="#000998"/>
 </svg>

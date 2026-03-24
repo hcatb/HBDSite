@@ -1,78 +1,80 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <!-- DARK SLIDE -->
   <rect width="1920" height="1080" fill="#0f172a"/>
 
   <!-- Eyebrow -->
-  <text x="120" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4.5" fill="#0f766e">WHO I WORK WITH</text>
-  <rect x="120" y="116" width="70" height="1.5" fill="#0f766e" opacity="0.4"/>
+  <text x="100" y="96" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="700" letter-spacing="4.5" fill="#0f766e">WHO I WORK WITH</text>
+  <rect x="100" y="112" width="60" height="1.5" fill="#0f766e" opacity="0.4"/>
 
   <!-- Headline -->
-  <text x="120" y="188" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#f8fafc">Retainers from 1 to 3.5 years across fintech's leading names.</text>
+  <text x="100" y="178" font-family="Georgia, 'Times New Roman', serif" font-size="54" fill="#f8fafc">Retainers from 1 to 3.5 years. Fintech's leading names.</text>
 
-  <!-- ===== ROW 1 LOGO CARDS ===== -->
-  <!-- Card dimensions: 290w x 170h. 5 per row. Slot width = (1920-240)/5 = 336 -->
-  <!-- Card x = 120 + slot*336 + (336-290)/2 = 120 + slot*336 + 23 -->
+  <!-- ===== ROW 1: 5 logo cards ===== -->
+  <!-- Canvas usable width: 1920-200 = 1720. 5 slots = 344px each. Card=300, margin=22 each side -->
+  <!-- Slot x positions: 100, 444, 788, 1132, 1476 -->
+  <!-- Card x = slot_x + 22 -->
 
-  <!-- Card 1: iwoca (x=143) -->
-  <rect x="143" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/Iwoca_Logo_Wiki.svg.png" x="158" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="288" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">2-year SEO retainer</text>
+  <!-- Card: iwoca (x=122) -->
+  <rect x="122" y="222" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/Iwoca_Logo_Wiki.svg.png" x="137" y="238" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="272" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">2-year SEO retainer</text>
 
-  <!-- Card 2: YouLend (x=479) -->
-  <rect x="479" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/YouLend.svg" x="494" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="624" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">2+ year retainer</text>
+  <!-- Card: YouLend (x=466) -->
+  <rect x="466" y="222" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/YouLend.svg" x="481" y="238" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="616" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">2+ year retainer</text>
 
-  <!-- Card 3: SAP Fioneer (x=815) -->
-  <rect x="815" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/Fioneer%20Logo_Black%20and%20Gold_LowRes_Web_Negative.png" x="830" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="960" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">2.5-year retainer</text>
+  <!-- Card: SAP Fioneer (x=810) -->
+  <rect x="810" y="222" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/Fioneer%20Logo_Black%20and%20Gold_LowRes_Web_Negative.png" x="825" y="238" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="960" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">2.5-year retainer</text>
 
-  <!-- Card 4: Calastone (x=1151) -->
-  <rect x="1151" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/Calastone%20copy.png" x="1166" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="1296" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Fund infrastructure &amp; DLT</text>
+  <!-- Card: Calastone (x=1154) -->
+  <rect x="1154" y="222" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/Calastone%20copy.png" x="1169" y="238" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1304" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Fund infrastructure &amp; DLT</text>
 
-  <!-- Card 5: MSCI (x=1487) -->
-  <rect x="1487" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/MSCI_logo_2019.svg" x="1502" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="1632" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Risk analytics &amp; ESG</text>
+  <!-- Card: MSCI (x=1498) -->
+  <rect x="1498" y="222" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/MSCI_logo_2019.svg" x="1513" y="238" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1648" y="400" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Risk analytics &amp; ESG</text>
 
-  <!-- ===== ROW 2 LOGO CARDS (y=460) ===== -->
+  <!-- ===== ROW 2: 5 logo cards (y=448) ===== -->
 
-  <!-- Card 6: Nium (x=143) -->
-  <rect x="143" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/nium-logo.png" x="158" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="288" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Global payments (website relaunch)</text>
+  <!-- Card: Nium (x=122) -->
+  <rect x="122" y="448" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/nium-logo.png" x="137" y="464" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="272" y="626" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Global payments relaunch</text>
 
-  <!-- Card 7: Dext (x=479) -->
-  <rect x="479" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/dext-logo-rgb-orange.webp" x="494" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="624" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">3.5 years in-house, Content Manager</text>
+  <!-- Card: Dext (x=466) -->
+  <rect x="466" y="448" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/dext-logo-rgb-orange.webp" x="481" y="464" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="616" y="626" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">3.5 years in-house, Content Manager</text>
 
-  <!-- Card 8: Payconiq (x=815) -->
-  <rect x="815" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/payconiq%20logo.png" x="830" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="960" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Mobile payments, 1+ year retainer</text>
+  <!-- Card: Payconiq (x=810) -->
+  <rect x="810" y="448" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/payconiq%20logo.png" x="825" y="464" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="960" y="626" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Mobile payments, 1+ year</text>
 
-  <!-- Card 9: Finshape (x=1151) -->
-  <rect x="1151" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/Finshape-Photoroom.png" x="1166" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="1296" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Core banking software</text>
+  <!-- Card: Finshape (x=1154) -->
+  <rect x="1154" y="448" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/Finshape-Photoroom.png" x="1169" y="464" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1304" y="626" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Core banking software</text>
 
-  <!-- Card 10: Haines Watts (x=1487) -->
-  <rect x="1487" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
-  <image href="../Client%20logos/HainesWatts.png" x="1502" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
-  <text x="1632" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Financial advisory</text>
+  <!-- Card: Haines Watts (x=1498) -->
+  <rect x="1498" y="448" width="300" height="160" rx="3" fill="#1a2744"/>
+  <image href="../Client%20logos/HainesWatts.png" x="1513" y="464" width="270" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1648" y="626" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#475569" text-anchor="middle">Financial advisory</text>
 
-  <!-- Zencargo text entry (no extra card slot, referenced on results slide) -->
-  <rect x="120" y="680" width="1680" height="1" fill="#1e293b"/>
-  <text x="120" y="730" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#475569">Also: Zencargo (5+ year relationship · supply chain logistics) · Deaglo · Capitalise · and others</text>
+  <!-- Zencargo & others line -->
+  <rect x="100" y="668" width="1720" height="1" fill="#1e293b"/>
+  <text x="100" y="716" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="19" fill="#334155">Also: Zencargo (5+ year relationship)  ·  Deaglo  ·  Capitalise  ·  and others</text>
 
   <!-- Footer -->
-  <text x="120" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b">highbeamdigital.co.uk</text>
-  <text x="1800" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="end">05 / 07</text>
+  <text x="100" y="1052" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#1e293b">highbeamdigital.co.uk</text>
+  <text x="1820" y="1052" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#1e293b" text-anchor="end">05 / 07</text>
 
   <!-- Bottom colour bar -->
-  <rect x="0" y="1070" width="1280" height="10" fill="#0f766e"/>
-  <rect x="1280" y="1070" width="640" height="10" fill="#000998"/>
+  <rect x="0" y="1068" width="1280" height="12" fill="#0f766e"/>
+  <rect x="1280" y="1068" width="640" height="12" fill="#000998"/>
 </svg>
