@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#0f172a"/>
+
+  <!-- Eyebrow -->
+  <text x="120" y="100" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4.5" fill="#0f766e">WHO I WORK WITH</text>
+  <rect x="120" y="116" width="70" height="1.5" fill="#0f766e" opacity="0.4"/>
+
+  <!-- Headline -->
+  <text x="120" y="188" font-family="Georgia, 'Times New Roman', serif" font-size="58" fill="#f8fafc">Retainers from 1 to 3.5 years across fintech's leading names.</text>
+
+  <!-- ===== ROW 1 LOGO CARDS ===== -->
+  <!-- Card dimensions: 290w x 170h. 5 per row. Slot width = (1920-240)/5 = 336 -->
+  <!-- Card x = 120 + slot*336 + (336-290)/2 = 120 + slot*336 + 23 -->
+
+  <!-- Card 1: iwoca (x=143) -->
+  <rect x="143" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/Iwoca_Logo_Wiki.svg.png" x="158" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="288" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">2-year SEO retainer</text>
+
+  <!-- Card 2: YouLend (x=479) -->
+  <rect x="479" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/YouLend.svg" x="494" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="624" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">2+ year retainer</text>
+
+  <!-- Card 3: SAP Fioneer (x=815) -->
+  <rect x="815" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/Fioneer%20Logo_Black%20and%20Gold_LowRes_Web_Negative.png" x="830" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="960" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">2.5-year retainer</text>
+
+  <!-- Card 4: Calastone (x=1151) -->
+  <rect x="1151" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/Calastone%20copy.png" x="1166" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1296" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Fund infrastructure &amp; DLT</text>
+
+  <!-- Card 5: MSCI (x=1487) -->
+  <rect x="1487" y="230" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/MSCI_logo_2019.svg" x="1502" y="248" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1632" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Risk analytics &amp; ESG</text>
+
+  <!-- ===== ROW 2 LOGO CARDS (y=460) ===== -->
+
+  <!-- Card 6: Nium (x=143) -->
+  <rect x="143" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/nium-logo.png" x="158" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="288" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Global payments (website relaunch)</text>
+
+  <!-- Card 7: Dext (x=479) -->
+  <rect x="479" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/dext-logo-rgb-orange.webp" x="494" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="624" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">3.5 years in-house, Content Manager</text>
+
+  <!-- Card 8: Payconiq (x=815) -->
+  <rect x="815" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/payconiq%20logo.png" x="830" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="960" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Mobile payments, 1+ year retainer</text>
+
+  <!-- Card 9: Finshape (x=1151) -->
+  <rect x="1151" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/Finshape-Photoroom.png" x="1166" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1296" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Core banking software</text>
+
+  <!-- Card 10: Haines Watts (x=1487) -->
+  <rect x="1487" y="460" width="290" height="160" rx="3" fill="#1e293b"/>
+  <image href="../Client%20logos/HainesWatts.png" x="1502" y="478" width="260" height="90" preserveAspectRatio="xMidYMid meet"/>
+  <text x="1632" y="638" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#64748b" text-anchor="middle">Financial advisory</text>
+
+  <!-- Zencargo text entry (no extra card slot, referenced on results slide) -->
+  <rect x="120" y="680" width="1680" height="1" fill="#1e293b"/>
+  <text x="120" y="730" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="20" fill="#475569">Also: Zencargo (5+ year relationship · supply chain logistics) · Deaglo · Capitalise · and others</text>
+
+  <!-- Footer -->
+  <text x="120" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b">highbeamdigital.co.uk</text>
+  <text x="1800" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="end">05 / 07</text>
+
+  <!-- Bottom colour bar -->
+  <rect x="0" y="1070" width="1280" height="10" fill="#0f766e"/>
+  <rect x="1280" y="1070" width="640" height="10" fill="#000998"/>
+</svg>

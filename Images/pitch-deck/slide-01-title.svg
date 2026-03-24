@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#0f172a"/>
+
+  <!-- Decorative rectangles top-right -->
+  <rect x="1300" y="-120" width="800" height="700" fill="#0f766e" opacity="0.08" transform="rotate(14 1700 230)"/>
+  <rect x="1440" y="60" width="600" height="560" fill="#000998" opacity="0.14" transform="rotate(14 1740 340)"/>
+  <rect x="1550" y="180" width="400" height="380" fill="#0f766e" opacity="0.07" transform="rotate(14 1750 370)"/>
+
+  <!-- HBD Logo -->
+  <image href="../Logo/White/HBD-White.svg" x="120" y="56" width="220" height="72" preserveAspectRatio="xMinYMid meet"/>
+
+  <!-- Left accent bar -->
+  <rect x="120" y="260" width="5" height="150" fill="#0f766e"/>
+
+  <!-- Eyebrow -->
+  <text x="145" y="296" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4.5" fill="#0f766e">FRACTIONAL CONTENT LEAD · B2B FINTECH &amp; FINANCIAL SERVICES</text>
+
+  <!-- Name -->
+  <text x="120" y="460" font-family="Georgia, 'Times New Roman', serif" font-size="120" fill="#f8fafc">Henry Bell</text>
+
+  <!-- Role -->
+  <text x="122" y="530" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="34" fill="#64748b">Copy · Strategy · Content Leadership</text>
+
+  <!-- Divider -->
+  <rect x="120" y="572" width="100" height="1.5" fill="#0f766e" opacity="0.5"/>
+
+  <!-- Website -->
+  <text x="120" y="618" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="26" fill="#334155" letter-spacing="0.5">highbeamdigital.co.uk</text>
+
+  <!-- Footer -->
+  <text x="120" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b">highbeamdigital.co.uk</text>
+  <text x="1800" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="end">01 / 07</text>
+
+  <!-- Bottom colour bar -->
+  <rect x="0" y="1070" width="1280" height="10" fill="#0f766e"/>
+  <rect x="1280" y="1070" width="640" height="10" fill="#000998"/>
+</svg>

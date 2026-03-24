@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#0f172a"/>
+
+  <!-- Right decorative panel -->
+  <rect x="1100" y="0" width="820" height="1080" fill="#000998" opacity="0.12"/>
+  <rect x="1098" y="0" width="4" height="1080" fill="#0f766e" opacity="0.3"/>
+
+  <!-- Eyebrow -->
+  <text x="120" y="110" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="4.5" fill="#0f766e">SECTORS</text>
+  <rect x="120" y="126" width="70" height="1.5" fill="#0f766e" opacity="0.4"/>
+
+  <!-- Headline -->
+  <text x="120" y="202" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#f8fafc">Deep specialism.</text>
+  <text x="120" y="270" font-family="Georgia, 'Times New Roman', serif" font-size="60" fill="#f8fafc">No generalist gaps.</text>
+
+  <!-- Full divider -->
+  <rect x="120" y="308" width="900" height="1" fill="#1e293b"/>
+
+  <!-- Sector list -->
+  <circle cx="136" cy="378" r="5" fill="#0f766e"/>
+  <text x="162" y="386" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Payments &amp; FX</text>
+
+  <circle cx="136" cy="456" r="5" fill="#0f766e"/>
+  <text x="162" y="464" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Embedded finance &amp; lending</text>
+
+  <circle cx="136" cy="534" r="5" fill="#0f766e"/>
+  <text x="162" y="542" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Banking infrastructure &amp; RegTech</text>
+
+  <circle cx="136" cy="612" r="5" fill="#0f766e"/>
+  <text x="162" y="620" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Accounting &amp; tax tech</text>
+
+  <circle cx="136" cy="690" r="5" fill="#0f766e"/>
+  <text x="162" y="698" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="32" fill="#f8fafc">Capital markets &amp; fund infrastructure</text>
+
+  <!-- Divider before quote -->
+  <rect x="120" y="752" width="900" height="1" fill="#1e293b"/>
+
+  <!-- Quote -->
+  <text x="120" y="810" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic" fill="#64748b">"From payment rails to PSD3, tokenisation to treasury</text>
+  <text x="120" y="848" font-family="Georgia, 'Times New Roman', serif" font-size="28" font-style="italic" fill="#64748b">— I simplify without dumbing down."</text>
+
+  <!-- Right panel content -->
+  <text x="1160" y="340" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="700" letter-spacing="3" fill="#0f766e">REPRESENTATIVE CLIENTS</text>
+  <rect x="1160" y="356" width="60" height="1.5" fill="#0f766e" opacity="0.4"/>
+
+  <text x="1160" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">iwoca · YouLend · Nium</text>
+  <text x="1160" y="460" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">SAP Fioneer · Calastone</text>
+  <text x="1160" y="500" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">MSCI · Dext · Payconiq</text>
+  <text x="1160" y="540" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">Finshape · Haines Watts</text>
+  <text x="1160" y="580" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="600" fill="#f8fafc">Zencargo</text>
+
+  <!-- Footer -->
+  <text x="120" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b">highbeamdigital.co.uk</text>
+  <text x="1800" y="1050" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="14" fill="#1e293b" text-anchor="end">06 / 07</text>
+
+  <!-- Bottom colour bar -->
+  <rect x="0" y="1070" width="1280" height="10" fill="#0f766e"/>
+  <rect x="1280" y="1070" width="640" height="10" fill="#000998"/>
+</svg>
