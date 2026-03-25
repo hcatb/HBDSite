@@ -2,75 +2,51 @@
 
   <!-- Background -->
   <rect width="1584" height="396" fill="#fafaf8"/>
-
-  <!-- Outer border -->
   <rect x="0" y="0" width="1584" height="396" fill="none" stroke="#e2e8f0" stroke-width="1"/>
 
-  <!-- Subtle teal tint block — left guard zone (headshot area) -->
-  <rect x="0" y="0" width="214" height="396" fill="#0f766e" opacity="0.03"/>
+  <!-- Title — top right -->
+  <text x="1504" y="76" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="#0f766e" text-anchor="end">HIGH BEAM DIGITAL</text>
+  <text x="1504" y="114" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="400" fill="#0f172a" text-anchor="end">Fractional Content Lead · B2B Fintech &amp; Financial Services</text>
+  <rect x="1084" y="126" width="420" height="1.5" fill="#0f766e" opacity="0.35"/>
+  <text x="1504" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8" text-anchor="end">highbeamdigital.co.uk</text>
 
-  <!-- Teal left accent bar — marks the safe content boundary -->
-  <rect x="212" y="44" width="3" height="288" fill="#0f766e"/>
+  <!-- White logo strip -->
+  <rect x="0" y="188" width="1584" height="160" fill="#ffffff"/>
+  <rect x="0" y="188" width="1584" height="1" fill="#e2e8f0"/>
+  <rect x="0" y="348" width="1584" height="1" fill="#e2e8f0"/>
 
-  <!-- Eyebrow -->
-  <text x="228" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="#0f766e">HIGH BEAM DIGITAL</text>
+  <!-- 6 logos in one row — x=230 to 1504 (1274px). Step=212. Logo w=170 h=70 centred at y=268 -->
+  <!-- Col x anchors: 230, 442, 654, 866, 1078, 1290 -->
 
-  <!-- Name -->
-  <text x="214" y="164" font-family="Georgia, 'Times New Roman', serif" font-size="68" fill="#0f172a">Henry Bell</text>
-
-  <!-- Title -->
-  <text x="214" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="19" fill="#334155">Fractional Content Lead · B2B Fintech &amp; Financial Services</text>
-
-  <!-- URL -->
-  <text x="214" y="244" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="13" fill="#0f766e" letter-spacing="0.5">highbeamdigital.co.uk</text>
-
-  <!-- Divider line -->
-  <rect x="214" y="266" width="52" height="1.5" fill="#0f766e" opacity="0.4"/>
-
-  <!-- Vertical separator -->
-  <rect x="848" y="44" width="1" height="288" fill="#e2e8f0"/>
-
-  <!-- TRUSTED BY label -->
-  <text x="872" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="700" letter-spacing="4" fill="#94a3b8">TRUSTED BY</text>
-
-  <!-- ── Logo grid: 2 rows × 3 cols ── -->
-  <!-- Available width: 1504 - 872 = 632px. Col step = 210px. Logo w=180, h=64 -->
-  <!-- Col x: 872, 1082, 1292 -->
-
-  <!-- Row 1 y=90 to 154 — iwoca / Zencargo / MSCI -->
+  <!-- iwoca -->
   <image href="Client%20logos/Iwoca_Logo_Wiki.svg.png"
-    x="872" y="90" width="180" height="64"
-    preserveAspectRatio="xMidYMid meet"
-    style="filter: grayscale(1);" opacity="0.45"/>
+    x="230" y="233" width="170" height="70"
+    preserveAspectRatio="xMidYMid meet"/>
 
+  <!-- Zencargo -->
   <image href="Client%20logos/ZC_Logo_Coloured-1.png"
-    x="1082" y="90" width="180" height="64"
-    preserveAspectRatio="xMidYMid meet"
-    style="filter: grayscale(1);" opacity="0.45"/>
+    x="442" y="233" width="170" height="70"
+    preserveAspectRatio="xMidYMid meet"/>
 
+  <!-- MSCI -->
   <image href="Client%20logos/MSCI_logo_2019.svg"
-    x="1292" y="90" width="180" height="64"
-    preserveAspectRatio="xMidYMid meet"
-    style="filter: grayscale(1);" opacity="0.45"/>
+    x="654" y="233" width="170" height="70"
+    preserveAspectRatio="xMidYMid meet"/>
 
-  <!-- Row divider -->
-  <rect x="872" y="178" width="612" height="0.5" fill="#e2e8f0"/>
-
-  <!-- Row 2 y=196 to 260 — Dext / SAP Fioneer / Nium -->
+  <!-- Dext -->
   <image href="Client%20logos/dext-logo-rgb-orange.webp"
-    x="872" y="196" width="180" height="64"
-    preserveAspectRatio="xMidYMid meet"
-    style="filter: grayscale(1);" opacity="0.45"/>
+    x="866" y="233" width="170" height="70"
+    preserveAspectRatio="xMidYMid meet"/>
 
+  <!-- SAP Fioneer -->
   <image href="Client%20logos/Fioneer%20Logo_Black%20and%20Gold_LowRes_Web_Negative.png"
-    x="1082" y="196" width="180" height="64"
-    preserveAspectRatio="xMidYMid meet"
-    style="filter: grayscale(1);" opacity="0.45"/>
+    x="1078" y="233" width="170" height="70"
+    preserveAspectRatio="xMidYMid meet"/>
 
+  <!-- Nium -->
   <image href="Client%20logos/nium-logo.png"
-    x="1292" y="196" width="180" height="64"
-    preserveAspectRatio="xMidYMid meet"
-    style="filter: grayscale(1);" opacity="0.45"/>
+    x="1290" y="233" width="170" height="70"
+    preserveAspectRatio="xMidYMid meet"/>
 
   <!-- Bottom colour bar -->
   <rect x="0" y="386" width="1056" height="10" fill="#0f766e"/>
