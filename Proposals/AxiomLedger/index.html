@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Proposal for AxiomLedger Technologies | High Beam Digital</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'slate': {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            500: '#64748b',
+                            600: '#475569',
+                            700: '#334155',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                        },
+                        'teal': {
+                            600: '#0d9488',
+                            700: '#0f766e',
+                            800: '#115e59',
+                        },
+                        'deep-blue': '#000998',
+                        'amber': '#FFAC00',
+                        'pink-red': '#FF0043',
+                        'alabaster': '#fafaf8',
+                    },
+                    fontFamily: {
+                        'serif': ['Playfair Display', 'Georgia', 'serif'],
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        .font-serif {
+            font-family: 'Playfair Display', Georgia, serif;
+        }
+
+        /* Password overlay */
+        #password-overlay {
+            position: fixed;
+            inset: 0;
+            background: #fafaf8;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #password-overlay.hidden {
+            display: none;
+        }
+
+        /* Proposal content hidden until unlocked */
+        #proposal-content {
+            display: none;
+        }
+
+        #proposal-content.unlocked {
+            display: block;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Section offset for sticky header */
+        section[id] {
+            scroll-margin-top: 72px;
+        }
+
+        /* Print styles */
+        @media print {
+            .no-print {
+                display: none !important;
+            }
+            section {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body class="bg-alabaster text-slate-800">
+
+    <!-- Password Protection Overlay -->
+    <div id="password-overlay">
+        <div class="max-w-md w-full mx-6">
+            <div class="text-center mb-10">
+                <img src="../../Images/Logo/Colour/HBD-full-colour.png" alt="High Beam Digital" class="h-12 mx-auto mb-8">
+                <h1 class="font-serif text-3xl text-slate-900 mb-2">Proposal for AxiomLedger</h1>
+                <p class="text-slate-500">Please enter the password to view this proposal</p>
+            </div>
+
+            <form id="password-form" class="space-y-4">
+                <div>
+                    <input
+                        type="password"
+                        id="password-input"
+                        placeholder="Enter password"
+                        class="w-full px-4 py-3 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700 focus:border-transparent text-center text-lg tracking-widest"
+                        autocomplete="off"
+                    >
+                </div>
+                <p id="error-message" class="text-pink-red text-sm text-center hidden">Incorrect password. Please try again.</p>
+                <button
+                    type="submit"
+                    class="w-full bg-teal-700 text-white py-3 px-6 rounded-lg font-medium hover:bg-teal-800 transition-colors"
+                >
+                    View Proposal
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Proposal Content -->
+    <div id="proposal-content">
+
+        <!-- Header -->
+        <header class="bg-white border-b border-slate-100 sticky top-0 z-50 no-print">
+            <div class="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
+                <a href="https://highbeamdigital.co.uk">
+                    <img src="../../Images/Logo/Colour/HBD-full-colour.png" alt="High Beam Digital" class="h-8">
+                </a>
+                <button onclick="window.print()" class="text-sm text-slate-500 hover:text-teal-700 transition-colors flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+                    </svg>
+                    Print / Save PDF
+                </button>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="pt-16 pb-12 bg-slate-900">
+            <div class="max-w-4xl mx-auto px-6">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-teal-400 mb-6">Proposal, August 2026</p>
+                <div class="flex items-center gap-5 mb-8">
+                    <img src="../../Images/Logo/White/HBD-White.png" alt="High Beam Digital" class="h-10 md:h-12">
+                    <div class="w-px h-10 bg-slate-600"></div>
+                    <img src="axiomledger-logo-cyan.png" alt="AxiomLedger Technologies" class="h-10 md:h-12 object-contain">
+                </div>
+                <h1 class="font-serif text-4xl md:text-5xl text-white mb-4">Founder Content Programme</h1>
+            </div>
+        </section>
+
+        <!-- Table of Contents -->
+        <section class="bg-white border-b border-slate-100 no-print">
+            <div class="max-w-4xl mx-auto px-6 py-8">
+                <p class="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400 mb-5">Contents</p>
+                <nav class="grid md:grid-cols-2 gap-x-12 gap-y-2">
+                    <a href="#context" class="flex items-center gap-3 text-slate-600 hover:text-teal-700 transition-colors py-1.5 border-b border-slate-100 group">
+                        <span class="text-xs text-slate-400 w-5 group-hover:text-teal-600 transition-colors">01</span>
+                        <span class="text-sm font-medium">Where You Are</span>
+                    </a>
+                    <a href="#approach" class="flex items-center gap-3 text-slate-600 hover:text-teal-700 transition-colors py-1.5 border-b border-slate-100 group">
+                        <span class="text-xs text-slate-400 w-5 group-hover:text-teal-600 transition-colors">02</span>
+                        <span class="text-sm font-medium">Approach</span>
+                    </a>
+                    <a href="#structure" class="flex items-center gap-3 text-slate-600 hover:text-teal-700 transition-colors py-1.5 border-b border-slate-100 group">
+                        <span class="text-xs text-slate-400 w-5 group-hover:text-teal-600 transition-colors">03</span>
+                        <span class="text-sm font-medium">Structure</span>
+                    </a>
+                    <a href="#why-me" class="flex items-center gap-3 text-slate-600 hover:text-teal-700 transition-colors py-1.5 border-b border-slate-100 group">
+                        <span class="text-xs text-slate-400 w-5 group-hover:text-teal-600 transition-colors">04</span>
+                        <span class="text-sm font-medium">Why Me</span>
+                    </a>
+                    <a href="#requirements" class="flex items-center gap-3 text-slate-600 hover:text-teal-700 transition-colors py-1.5 border-b border-slate-100 group">
+                        <span class="text-xs text-slate-400 w-5 group-hover:text-teal-600 transition-colors">05</span>
+                        <span class="text-sm font-medium">What I'd Need</span>
+                    </a>
+                    <a href="#investment" class="flex items-center gap-3 text-slate-600 hover:text-teal-700 transition-colors py-1.5 border-b border-slate-100 group">
+                        <span class="text-xs text-slate-400 w-5 group-hover:text-teal-600 transition-colors">06</span>
+                        <span class="text-sm font-medium">Investment</span>
+                    </a>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main class="max-w-4xl mx-auto px-6 py-16">
+
+            <!-- Context Section -->
+            <section id="context" class="mb-16">
+                <h2 class="font-serif text-2xl text-slate-900 mb-6 pb-2 border-b border-slate-200">Where You Are</h2>
+                <div class="prose prose-slate max-w-none">
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        AxiomLedger has a differentiated product. The technology provides independent, continuous proof that digital entitlements match the real underlying assets — and records that cannot be altered. Goldlagerhaus proves it works in production.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Two years in, the challenge is not the product. It is finding the audience. The message has not been tested at scale, and the story has not yet been told in a way that makes the right companies come to you.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Our initial conversation focused on LinkedIn. That is the right channel. But before posting, it is worth spending a few weeks on foundational work — getting the story straight, mapping who it is for, and building a plan that every piece of content will serve. Done in that order, the content itself becomes faster to write, sharper in effect, and easier to evaluate.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed">
+                        This proposal is for that programme: a founder content engine that builds AxiomLedger's story from the ground up, and uses content creation to test and refine it in public.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Approach Section -->
+            <section id="approach" class="mb-16">
+                <h2 class="font-serif text-2xl text-slate-900 mb-6 pb-2 border-b border-slate-200">Approach</h2>
+
+                <div class="prose prose-slate max-w-none mb-10">
+                    <p class="text-slate-600 leading-relaxed">
+                        Four workstreams, in the order they need to be built:
+                    </p>
+                </div>
+
+                <div class="space-y-10">
+
+                    <!-- Step 1 -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-teal-700">01</span>
+                            <h3 class="font-serif text-xl text-slate-900">Messaging Framework</h3>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed mb-5">
+                            Before content, you need a clear and tested answer to four questions: what is AxiomLedger, who is it for, what problems does it solve, and what does it prove? This is the backbone for everything that follows. Without it, content is a series of disconnected posts. With it, every piece of content compounds on the last.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="bg-white border border-slate-100 rounded-lg p-5">
+                                <h4 class="font-semibold text-slate-800 mb-2 text-sm">Core story</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">What AxiomLedger does, stated plainly and precisely — in a way that makes the right person immediately understand why it matters.</p>
+                            </div>
+                            <div class="bg-white border border-slate-100 rounded-lg p-5">
+                                <h4 class="font-semibold text-slate-800 mb-2 text-sm">Audience mapping</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">Who the message is for: the roles, the institutions, the moments in the decision process where AxiomLedger becomes relevant.</p>
+                            </div>
+                            <div class="bg-white border border-slate-100 rounded-lg p-5">
+                                <h4 class="font-semibold text-slate-800 mb-2 text-sm">Use cases</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">The specific scenarios where the technology solves a real problem — the cases that are most commercially urgent and most defensible to tell.</p>
+                            </div>
+                            <div class="bg-white border border-slate-100 rounded-lg p-5">
+                                <h4 class="font-semibold text-slate-800 mb-2 text-sm">Measurable value</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">What AxiomLedger enables that a buyer can point to — in terms of risk, cost, compliance, or auditability — and why existing alternatives do not deliver the same thing.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-teal-700">02</span>
+                            <h3 class="font-serif text-xl text-slate-900">Content Plan</h3>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Once the messaging framework is in place, I build a posting plan mapped to AxiomLedger's target sectors, partners, and commercial priorities. This is not a generic editorial calendar — it is a strategic document that maps every planned piece of content to a specific audience, a specific moment in the buying journey, and a specific outcome. Every post pulls in a commercial direction. The plan becomes the brief for everything that follows, so effort does not get spread thin across topics that do not serve the goal.
+                        </p>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-teal-700">03</span>
+                            <h3 class="font-serif text-xl text-slate-900">Article Sequence</h3>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed mb-5">
+                            Founder-bylined long-form articles are the highest-value content format for a B2B fintech audience. They establish authority, they circulate through institutional networks, and they give LinkedIn posts something of substance to point to. I write these from short interviews with you — in your voice, on your ideas — and deliver each piece with a short promotion guide so you know how to use it.
+                        </p>
+                        <div class="bg-slate-50 rounded-lg p-5">
+                            <p class="text-slate-600 text-sm leading-relaxed italic">Articles are the asset. LinkedIn posts are the distribution. The cadence in Month 1 is heavier on the writing side to establish the corpus; from Month 2, posts and articles run together in a steady rhythm.</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div>
+                        <div class="flex items-center gap-3 mb-5">
+                            <span class="text-[11px] font-semibold uppercase tracking-[0.15em] text-teal-700">04</span>
+                            <h3 class="font-serif text-xl text-slate-900">Website</h3>
+                        </div>
+                        <p class="text-slate-600 leading-relaxed">
+                            Once the messaging has been tested in public — through articles, posts, and conversations — it is ready to be baked into the website. The site should be a credible backstop: the place you send someone after a conversation that wants to know more. I keep this as a separate project, quoted separately once the message is proven, so you are not investing in web infrastructure before you know what to say.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Structure Section -->
+            <section id="structure" class="mb-16">
+                <h2 class="font-serif text-2xl text-slate-900 mb-6 pb-2 border-b border-slate-200">Structure</h2>
+
+                <div class="prose prose-slate max-w-none mb-8">
+                    <p class="text-slate-600 leading-relaxed">
+                        One ongoing engagement, roughly one day per week, heavier in Month 1.
+                    </p>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- Month 1 -->
+                    <div class="bg-white border border-slate-200 rounded-lg overflow-hidden">
+                        <div class="bg-slate-900 px-6 py-4">
+                            <div class="flex items-center justify-between flex-wrap gap-2">
+                                <h3 class="font-serif text-lg text-white">Month 1 — Foundation</h3>
+                                <span class="text-slate-400 text-sm">Front-loaded</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-slate-600 text-sm leading-relaxed mb-5">
+                                The first month is heavier because it does the work that everything else depends on. Messaging framework, content plan, and first articles — all delivered before Month 2 begins so the ongoing cadence can run without friction.
+                            </p>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Deliverables</h4>
+                            <ul class="space-y-2 text-slate-600 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>Messaging framework — core story, audience map, use cases, measurable value</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>Content plan — posting plan mapped to target sectors and commercial priorities</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>First two articles — written in your voice, from interview, with promotion guidance</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>LinkedIn post series — initial batch mapped to the content plan</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Month 2+ -->
+                    <div class="bg-white border border-teal-700/30 rounded-lg overflow-hidden">
+                        <div class="bg-teal-700 px-6 py-4">
+                            <div class="flex items-center justify-between flex-wrap gap-2">
+                                <div class="flex items-center gap-3">
+                                    <h3 class="font-serif text-lg text-white">Month 2 Onward — Cadence</h3>
+                                    <span class="text-[10px] uppercase tracking-wider text-teal-200 font-medium">Ongoing</span>
+                                </div>
+                                <span class="text-teal-200 text-sm">~1 day / week</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-slate-600 text-sm leading-relaxed mb-5">
+                                Steady rhythm against the content plan — one to two articles per month, ongoing LinkedIn posts, and light iteration on the messaging as you learn what resonates. The content plan is a living document; we refine what is working and redirect what is not.
+                            </p>
+                            <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">Deliverables</h4>
+                            <ul class="space-y-2 text-slate-600 text-sm">
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>One to two articles per month — founder-bylined, from interview, in your voice</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>Ongoing LinkedIn post series — tied to each article and standalone topics</span>
+                                </li>
+                                <li class="flex gap-2">
+                                    <span class="text-teal-700 flex-shrink-0">•</span>
+                                    <span>Light messaging iteration — adjusting emphasis as you learn what lands</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Website callout -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-lg p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-slate-200 rounded-full flex items-center justify-center">
+                                <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-slate-800 mb-1 text-sm">Website — separate project</h4>
+                                <p class="text-slate-600 text-sm leading-relaxed">Once the message has been tested in public and we know what is working, I will quote for a new site version that integrates it. Keeping this separate means you are not spending on web infrastructure before the story is ready.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Why Me Section -->
+            <section id="why-me" class="mb-16">
+                <h2 class="font-serif text-2xl text-slate-900 mb-6 pb-2 border-b border-slate-200">Why Me</h2>
+
+                <div class="space-y-4">
+                    <div class="bg-white border border-slate-100 rounded-lg p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-semibold">1</div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 mb-2">Fintech and trust fluency</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Ten years working in and writing for fintech: lending, payments, banking infrastructure, and DeFi. I understand the regulated environment AxiomLedger operates in, the buyers you are selling to, and the compliance and institutional trust dynamics that shape how a story like yours needs to be told.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-100 rounded-lg p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-semibold">2</div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 mb-2">Claim discipline</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">Most fintech content is soft because the writers do not know what they cannot say. I have spent a decade in regulated and compliance-led industries and know the difference between a claim that lands and one that creates a liability. Content for AxiomLedger needs to be precise — I write precisely.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-100 rounded-lg p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-slate-900 text-white rounded-full flex items-center justify-center flex-shrink-0 text-sm font-semibold">3</div>
+                            <div>
+                                <h3 class="font-semibold text-slate-900 mb-2">Strategic mindset</h3>
+                                <p class="text-slate-600 text-sm leading-relaxed">I have run content as an acquisition and conversion channel — as marketing manager, not as a writer-for-hire. I think about what content is supposed to do commercially before I write a word. Today, I run fractional content strategy for fintechs. This is the work I do.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Requirements Section -->
+            <section id="requirements" class="mb-16">
+                <h2 class="font-serif text-2xl text-slate-900 mb-6 pb-2 border-b border-slate-200">What I'd Need From You</h2>
+
+                <div class="prose prose-slate max-w-none mb-6">
+                    <p class="text-slate-600 leading-relaxed">The lightest possible ask. The whole point of this model is that the burden on you is minimal.</p>
+                </div>
+
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 bg-white border border-slate-100 rounded-lg p-4">
+                        <svg class="w-5 h-5 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-slate-800 text-sm font-medium">Interview time up front</p>
+                            <p class="text-slate-500 text-sm mt-0.5">Two to three focused sessions in Month 1 to build the messaging framework and first articles. This is the heaviest lift; after it, the ongoing requirement drops significantly.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white border border-slate-100 rounded-lg p-4">
+                        <svg class="w-5 h-5 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-slate-800 text-sm font-medium">A short weekly conversation</p>
+                            <p class="text-slate-500 text-sm mt-0.5">Twenty to thirty minutes, ongoing. Enough to keep the content grounded in what is actually happening at AxiomLedger and to iterate on what is working.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 bg-white border border-slate-100 rounded-lg p-4">
+                        <svg class="w-5 h-5 text-teal-700 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <p class="text-slate-800 text-sm font-medium">Quick sign-off on drafts</p>
+                            <p class="text-slate-500 text-sm mt-0.5">I aim to get drafts right first time. I ask for one round of feedback only — no long revision cycles. The goal is to make sign-off fast, not to produce content that needs significant rework.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Investment Section -->
+            <section id="investment" class="mb-16">
+                <h2 class="font-serif text-2xl text-slate-900 mb-6 pb-2 border-b border-slate-200">Investment</h2>
+
+                <div class="bg-slate-900 text-white rounded-lg p-8 mb-6">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase tracking-wider mb-2">Month 1 Foundation</p>
+                            <p class="text-2xl font-serif mb-1">£3,000</p>
+                            <p class="text-slate-400 text-sm">c. 6 days. Messaging framework, content plan, first articles</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase tracking-wider mb-2">Month 2 Onward</p>
+                            <p class="text-2xl font-serif mb-1">£2,000 / month</p>
+                            <p class="text-slate-400 text-sm">~1 day/week. Articles, posts, messaging iteration</p>
+                        </div>
+                        <div>
+                            <p class="text-slate-400 text-xs uppercase tracking-wider mb-2">Availability</p>
+                            <p class="text-2xl font-serif mb-1">Immediate</p>
+                            <p class="text-slate-400 text-sm">Available to start as soon as agreed</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white border border-slate-100 rounded-lg p-6">
+                    <h3 class="font-semibold text-slate-800 mb-4">A note on the website</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">The website is scoped and quoted separately once the message has been tested. There is no point building a new site before you know what it should say — and after two to three months of content, you will know. The quote will reflect what is needed at that point.</p>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="text-center py-12 border-t border-slate-200">
+                <h2 class="font-serif text-2xl text-slate-900 mb-4">Ready to get started?</h2>
+                <p class="text-slate-600 mb-8">Let's agree a start date and get the first session in the diary.</p>
+                <a href="mailto:henry@highbeamdigital.co.uk" class="inline-flex items-center gap-2 bg-teal-700 text-white px-8 py-3 rounded-lg font-medium hover:bg-teal-800 transition-colors">
+                    Get in touch
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-900 text-slate-400 py-12">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <img src="../../Images/Logo/White/HBD-White.png" alt="High Beam Digital" class="h-8 mx-auto mb-4 opacity-80">
+                <p class="text-sm">This proposal is confidential and intended solely for the recipient.</p>
+                <p class="text-sm mt-2">&copy; 2026 High Beam Digital. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Password Protection Script -->
+    <script>
+        const PROPOSAL_PASSWORD = 'AL2026';
+
+        const overlay = document.getElementById('password-overlay');
+        const content = document.getElementById('proposal-content');
+        const form = document.getElementById('password-form');
+        const input = document.getElementById('password-input');
+        const errorMsg = document.getElementById('error-message');
+
+        if (sessionStorage.getItem('al_proposal_authenticated') === 'true') {
+            overlay.classList.add('hidden');
+            content.classList.add('unlocked');
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (input.value === PROPOSAL_PASSWORD) {
+                sessionStorage.setItem('al_proposal_authenticated', 'true');
+                overlay.classList.add('hidden');
+                content.classList.add('unlocked');
+            } else {
+                errorMsg.classList.remove('hidden');
+                input.value = '';
+                input.focus();
+            }
+        });
+
+        input.focus();
+    </script>
+
+</body>
+</html>
